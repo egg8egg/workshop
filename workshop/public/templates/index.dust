@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>EDU Project</title>
 
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="css/myStyle.css">
+	<link rel="stylesheet" href="css/app.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,52 +27,97 @@
    
   </head>
   <body>
-
-	<div class = "top-head-container">
-		<div class="row">
-		  <div class="col-md-6">
-		  	<img src="http://www.ansonika.com/edu/img/logo.png">
-		  	</img>
-		  </div>
-		  <div class="col-md-3">
-			<ul>
-                <li><a href="index.html" title="Home">Home</a> | </li>
-                <li><a href="news-events.html" title="News and Events">News &amp; Events</a> | </li>
-                <li><a href="contact.html" title="Contact">Contact</a></li>
-            </ul>
-		  </div>
-		  <div class="col-md-3">
-			  <p>
-			  	<strong>+44 (0) 123 456 789</strong> </br>
-			  	"Admissons department"
-			  </p>
-
-		  </div>	
+	<div class="row">
+		<div class = "top-head-container">		
+		    <div class="col-md-5">
+			    <img src="http://www.ansonika.com/edu/img/logo.png">
+			    </img>
+		    </div>
+		    <div class="col-md-4">
+				<ul>
+	                <li><a href="index.html" title="Home">Home</a> | </li>
+	                <li><a href="news-events.html" title="News and Events">News &amp; Events</a> | </li>
+	                <li><a href="contact.html" title="Contact">Contact</a></li>
+	            </ul>
+		    </div>
+		    <div class="col-md-3">
+		    	<strong>+44 (0) 123 456 789</strong> </br>
+				"Admissons department"
+		    			
+		    </div>		  	
 		</div>
 	</div>
 	
-	<div class="navbar-container">
-		<ul class="nav nav-pills">
-		  <li><a href="#" class="slideDown">COURSES</a></li>
-		  <li><a href="#" class="slideDown">SCHOOL & ACADEMICS</a></li>
-		  <li><a href="#" class="slideDown">ABOUT</a></li>
-		  <li><a href="#" class="slideDown">PAGES</a></li>
-		  <li><a href="#" class="slideDown">BLOG</a></li>
-		  <li><a href="#" class="slideDown">SIMPLE DROP</a></li>
-		  <li><a href="#" class="slideDown">CONTACTS</a></li>		  
-		</ul>
+	<div class="row">
+		<div class="navbar-container">
+			<ul class="nav nav-pills">
+			  <li><a id="courses" href="#" class="slideDown">COURSES</a></li>
+			  <li><a id="school" href="#" class="slideDown">SCHOOL & ACADEMICS</a></li>
+			  <li><a id="about" href="#" class="slideDown">ABOUT</a></li>
+			  <li><a id="pages" href="#" class="slideDown">PAGES</a></li>
+			  <li><a id="blog" href="#" class="slideDown">BLOG</a></li>
+			  <li><a id="drop" href="#" class="slideDown">SIMPLE DROP</a></li>
+			  <li><a id="contacts" href="#" class="slideDown">CONTACTS</a></li>		  
+			</ul>
+		</div>
 	</div>
-
 	<div id="panel" class="slide-Down-panle">
-	    {> "{viewName}" /}
+		{>"courses"/} 
 	</div>
 	<script> 
-$(document).ready(function(){
-  $(".slideDown").click(function(){
-    $("#panel").slideToggle("600");
-  });
-});
-</script>
+		$(document).ready(function(){
+			$(".slideDown").click(function(){			  	
+				if($("#panel").is(":visible")){
+					$("#panel").fadeOut("fast");
+					switch (this.id) {
+					    case "courses":
+					        $("#panel").html('{>"courses"/}');
+					        break;
+					    case "school":
+					        $("#panel").html('{>"school"/}');
+					        break;
+					    case "about":
+					        $("#panel").html('{>"about"/}');
+					        break;
+					    case "pages":
+					        $("#panel").html('{>"pages"/}');
+					        break;
+					    case "contacts":
+					        $("#panel").html('{>"contacts"/}');
+					        break;
+					    default: 
+					        $("#panel").html(this.id);
+					        break; 
+					}
+					$("#panel").slideToggle("600");
+				}
+				else{
+					switch (this.id) {
+					    case "courses":
+					        $("#panel").html('{>"courses"/}');
+					        break;
+					    case "school":
+					        $("#panel").html('{>"school"/}');
+					        break;
+					    case "about":
+					        $("#panel").html('{>"about"/}');
+					        break;
+					    case "pages":
+					        $("#panel").html('{>"pages"/}');
+					        break;
+					    case "contacts":
+					        $("#panel").html('{>"contacts"/}');
+					        break;
+					    default: 
+					        $("#panel").html(this.id);
+					        break; 
+					}
+					$("#panel").slideToggle("600");
+				}
+			    
+		  });
+		});
+	</script>
 	
 
     

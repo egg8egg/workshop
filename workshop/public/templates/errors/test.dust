@@ -1,4 +1,62 @@
-<div class="row">
+<script> 
+		$(document).ready(function(){
+			$(".slideDown").click(function(){			  	
+				if($("#panel").is(":visible")){
+					$("#panel").fadeOut("fast");
+					switch (this.id) {
+					    case "courses":
+					        $("#panel").html("{>"courses"/}");
+					        break;
+					    case "school":
+					        $("#panel").html("{>"school"/}");
+					        break;
+					    case "about":
+					        $("#panel").html("{>"about"/}");
+					        break;
+					    case "pages":
+					        $("#panel").html("{>"pages"/}");
+					        break;
+					    case "contacts":
+					        $("#panel").html("{>"contacts"/}");
+					        break;
+					    default: 
+					        $("#panel").html(this.id);
+					        break; 
+					}
+					$("#panel").slideToggle("600");
+				}
+				else{
+					switch (this.id) {
+					    case "courses":
+					        $("#panel").html("{>"courses"/}");
+					        break;
+					    case "school":
+					        $("#panel").html("{>"school"/}");
+					        break;
+					    case "about":
+					        $("#panel").html("{>"about"/}");
+					        break;
+					    case "pages":
+					        $("#panel").html("{>"pages"/}");
+					        break;
+					    case "contacts":
+					        $("#panel").html("{>"contacts"/}");
+					        break;
+					    default: 
+					        $("#panel").html(this.id);
+					        break; 
+					}
+					$("#panel").slideToggle("600");
+				}
+			    
+		  });
+		});
+	</script>
+
+
+
+
+	<div class="row">
 
 		<div class="col-md-3">
 			<h4>Quick links</h4>
@@ -18,12 +76,12 @@
 			<div class="row">
 				<h5><a href="#"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-				<button type="button" class="btn btn-danger">Read more</button>
+				<p><a href="course-detail.html" class=""btn btn-sm btn-danger"">Read more</a></p>
 			</div>
 			<div class="row">
 				<h5><a href="#"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-				<button type="button" class="btn btn-danger">Read more</button>
+				<p><a href="course-detail.html" class=""btn btn-sm btn-danger"">Read more</a></p>
 			</div>	
 		</div>
 		
@@ -31,12 +89,12 @@
 			<div class="row">
 				<h5><a href="#"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-				<button type="button" class="btn btn-danger">Read more</button>
+				<p><a href="course-detail.html" class=""btn btn-sm btn-danger"">Read more</a></p>
 			</div>
 			<div class="row">
 				<h5><a href="#"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-				<button type="button" class="btn btn-danger">Read more</button>
+				<p><a href="course-detail.html" class=""btn btn-sm btn-danger"">Read more</a></p>
 			</div>	
 		</div>
 
@@ -44,13 +102,14 @@
 			<div class="row">
 				<h5><a href="#"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-				<button type="button" class="btn btn-danger">Read more</button>
+				<p><a href="course-detail.html" class=""btn btn-sm btn-danger"">Read more</a></p>
 			</div>
 			<div class="row">
 				<h5><a href="#"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
-				<button type="button" class="btn btn-danger">Read more</button>
+				<p><a href="course-detail.html" class=""btn btn-sm btn-danger"">Read more</a></p>
 			</div>	
 		</div>				  	
 
 	</div>
+
