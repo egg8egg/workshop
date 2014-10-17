@@ -1,1 +1,53 @@
-this is pages
+<html>
+<div class="row marginDiv">
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-star"></span> play with glyphicon
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-music"></span> play with glyphicon
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-glass"></span> play with glyphicon
+		</button>
+	</div>
+</div>
+<div class="row marginDiv">
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-th"></span> play with glyphicon
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-search"></span> play with glyphicon
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-film"></span> play with glyphicon
+		</button>
+	</div>
+</div>
+<div class="row marginDiv">
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-camera"></span> play with glyphicon
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-print"></span> play with glyphicon
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-upload"></span> play with glyphicon
+		</button>
+	</div>
+</div>
+</html>

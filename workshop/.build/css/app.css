@@ -17,34 +17,36 @@
   background-image: url('http://www.ansonika.com/edu/img/icon-phone.png');
   background-position: 170px 0;
   background-repeat: no-repeat;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 100;
 }
-/* line 22, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 23, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-3 strong {
   color: #66cccc;
   font-size: 16px;
 }
-/* line 28, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 29, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 {
   padding-top: 8px;
   padding-left: 15px;
 }
-/* line 31, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 32, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 ul {
   padding-left: 0px;
   list-style-type: none;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: 100;
 }
-/* line 37, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 38, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 ul li {
   display: inline;
 }
-/* line 40, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 41, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 ul li a {
   color: white;
 }
-/* line 49, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 50, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-container {
   background-color: #0099cc;
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
@@ -55,22 +57,61 @@
   line-height: 20px;
   width: auto;
   padding-top: 2px;
-  padding-left: 20px;
+  padding-left: 100px;
 }
-/* line 62, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 63, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-container .nav-pills > li > a {
   color: white;
+  font-size: 12px;
 }
-/* line 64, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 66, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-container .nav-pills > li > a:hover {
   background-color: #0c7497;
 }
-/* line 70, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 72, /Users/EggDouglas/workshop/workshop/css/app */
 .slide-Down-panle {
-  text-align: center;
   background-color: #2d343e;
   height: auto;
   width: auto;
+  min-width: 800px;
+  max-width: 80%;
   display: none;
   color: white;
+  border: 30px solid #2d343e;
+  border-top-width: 20px;
+  border-left-width: 20px;
+  margin-left: 80px;
+  position: absolute;
+  z-index: 1000;
+}
+/* line 87, /Users/EggDouglas/workshop/workshop/css/app */
+.slide-Down-panle .row p {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+}
+/* line 96, /Users/EggDouglas/workshop/workshop/css/app */
+hr {
+  margin: 20px 0 20px 0;
+  border: 0;
+  border-top: 1px solid #25282d;
+  border-bottom: 1px solid #414750;
+}
+/* line 103, /Users/EggDouglas/workshop/workshop/css/app */
+.marginDiv {
+  margin: 15px 5px 15px 5px;
+}
+/* line 108, /Users/EggDouglas/workshop/workshop/css/app */
+#card {
+  position: absolute;
+  z-index: 999;
+  margin-top: -20px;
+  width: auto;
+  padding-left: 100px;
+}
+/* line 115, /Users/EggDouglas/workshop/workshop/css/app */
+#card h5 {
+  height: 100px;
+  width: 100px;
+  background-color: #0c7497;
 }

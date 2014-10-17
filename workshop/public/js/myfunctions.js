@@ -1,19 +1,5 @@
-'use strict';
 
-
-requirejs.config({
-    paths: {
-    	'jquery':'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-    	'bootstrap':'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
-    }
-});
-
-
-require(['https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'], function () {
-
-    var app = {
-        initialize: function () {
-            $(document).ready(function(){
+$(document).ready(function(){
 			$(".slideDown").click(function(){			  	
 				if($("#panel").is(":visible")){
 					$("#panel").fadeOut("fast");
@@ -67,11 +53,4 @@ require(['https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','ht
 		});
 	
             
-        }
-            
-        }
-    };
-
-    app.initialize();
-
-});
+        

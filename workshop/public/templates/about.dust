@@ -1,1 +1,75 @@
-this is about
+<html>
+<div class="row">
+	<div class="col-md-3">
+		<h4>Quick links</h4>
+			<ul>
+				<li><a href="all-courses.html" title="All courses">All courses</a></li>
+				<li><a href="course-detail.html" title="Course detail">Course detail</a></li>
+				<li><a href="staff.html" title="Meet the team">Meet the team</a></li>
+				<li><a href="contact.html" title="Apply for a course">Apply for a course</a></li>
+				<li><a href="about-us.html" title="About">About </a></li>
+				<li><a href="news-events.html" title="News">News</a></li>
+				<li><a href="contact.html" title="Contact">Ask for more information</a></li>
+			</ul>
+			<p><a href="all-courses.html" title="Courses" class="btn btn-primary">View all courses</a></p>
+	</div>
+	<div class="col-md-9">
+		<div class="marginDiv">
+			<ul class="nav nav-tabs" role="tablist" id="myTab">
+			<li class="active"><a href="#staff" role="tab" data-toggle="tab">Staff</a></li>
+			<li><a href="#history" role="tab" data-toggle="tab">History</a></li>
+			</ul>
+		</div>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="staff">
+				<div class="col-md-4">
+					<p><img src="http://www.ansonika.com/edu/img/teacher-small.jpg" alt="..." class="img-rounded img-responsive"></p>
+					<h5>Ms. Annie Ann <em>Management</em></h5>
+					<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					<button type="button" class="btn btn-danger btn-xs">Read more</button>
+				</div>
+				<div class="col-md-4">
+					<p><img src="http://www.ansonika.com/edu/img/teacher-small.jpg" alt="..." class="img-rounded img-responsive"></p>
+					<h5>Ms. Annie Ann <em>Management</em></h5>
+					<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					<button type="button" class="btn btn-danger btn-xs">Read more</button>
+				</div>
+				<div class="col-md-4">
+					<p><img src="http://www.ansonika.com/edu/img/teacher-small.jpg" alt="..." class="img-rounded img-responsive"></p>
+					<h5>Ms. Annie Ann <em>Management</em></h5>
+					<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					<button type="button" class="btn btn-danger btn-xs">Read more</button>
+				</div>
+			</div>
+			<div class="tab-pane" id="history">				
+				<div class="row">
+					<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. An utinam reprimique duo, putant mandamus cu qui.</p>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-6">
+						<h5>History</h5>
+						<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					</div>
+					<div class="col-md-6">
+						<h5>History</h5>
+						<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+
+
+	</div>
+</div>
+</html>
+
+
+
+
+
+

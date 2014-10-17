@@ -1,1 +1,32 @@
-this is contacts
+<html>
+	<div class="row">
+		<div class="col-md-6">
+			<iframe height="300" src="https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=new+york&amp;sll=40.714353,-74.005973&amp;sspn=0.868126,2.422485&amp;ie=UTF8&amp;hq=&amp;hnear=New+York,+Stati+Uniti&amp;t=m&amp;z=10&amp;iwloc=A&amp;ll=40.714353,-74.005973&amp;output=embed">
+			</iframe>
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<h4>Address</h4>
+				<ul>
+					<li><i class="icon-home"></i> 11 Fifth Ave, Loftus - NEW JERSEY, US</li>
+					<li><i class="icon-phone"></i> Telephone: + 61 (2) 8093 3400</li>
+					<li><i class="icon-phone-sign"></i> Fax: +61 (2) 9542 3599</li>
+					<li><i class="icon-envelope"></i> Email: <a href="#">submissions@domain.com</a></li>
+				</ul>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-6">
+					<h5>Questions?</h5>
+					<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					<button type="button" class="btn btn-danger btn-xs">Read more</button>
+				</div>
+				<div class="col-md-6">
+					<h5>Questions?</h5>
+					<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					<button type="button" class="btn btn-danger btn-xs">Read more</button>
+				</div>		
+			</div>
+		</div>
+	</div>
+</html>

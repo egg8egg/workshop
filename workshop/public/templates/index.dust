@@ -24,9 +24,11 @@
     <!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+	
+
    
   </head>
-  <body>
+  <body background-img="http://www.ansonika.com/edu/img/pattern.jpg";>
 	<div class="row">
 		<div class = "top-head-container">		
 		    <div class="col-md-5">
@@ -37,9 +39,24 @@
 				<ul>
 	                <li><a href="index.html" title="Home">Home</a> | </li>
 	                <li><a href="news-events.html" title="News and Events">News &amp; Events</a> | </li>
-	                <li><a href="contact.html" title="Contact">Contact</a></li>
+	                <li><a id="myAjax" href="" title="Contact">Contact</a></li>
 	            </ul>
 		    </div>
+
+		    <script>
+		    $(document).ready(function(){
+		    	$("#myAjax").click(function(event){
+		    		event.preventDefault();
+		    		$.ajax({url:"/contacts_ajax",success:function(result){
+		    			$("#ajaxTest").html(result);
+		    		}});
+		    	});
+		    });
+		    </script>
+		    <div id="ajaxText">
+
+		    </div>
+
 		    <div class="col-md-3">
 		    	<strong>+44 (0) 123 456 789</strong> </br>
 				"Admissons department"
@@ -65,31 +82,44 @@
 		{>"courses"/} 
 	</div>
 	<script> 
+
+		
 		$(document).ready(function(){
-			$(".slideDown").click(function(){			  	
+			var lastClickId;
+			$(".slideDown").click(function(){
+				lastClickId = this.id;
+			});
+			$(".slideDown").click(function(){
+
 				if($("#panel").is(":visible")){
-					$("#panel").fadeOut("fast");
-					switch (this.id) {
-					    case "courses":
-					        $("#panel").html('{>"courses"/}');
-					        break;
-					    case "school":
-					        $("#panel").html('{>"school"/}');
-					        break;
-					    case "about":
-					        $("#panel").html('{>"about"/}');
-					        break;
-					    case "pages":
-					        $("#panel").html('{>"pages"/}');
-					        break;
-					    case "contacts":
-					        $("#panel").html('{>"contacts"/}');
-					        break;
-					    default: 
-					        $("#panel").html(this.id);
-					        break; 
+					if(this.id==lastClickId){
+						$("#panel").fadeOut("fast");
 					}
-					$("#panel").slideToggle("600");
+					else{
+						$("#panel").fadeOut("fast");
+						switch (this.id) {
+						    case "courses":
+						        $("#panel").html('{>"courses"/}');
+						        break;
+						    case "school":
+						        $("#panel").html('{>"school"/}');
+						        break;
+						    case "about":
+						        $("#panel").html('{>"about"/}');
+						        break;
+						    case "pages":
+						        $("#panel").html('{>"pages"/}');
+						        break;
+						    case "contacts":
+						        $("#panel").html('{>"contacts"/}');
+						        break;
+						    default: 
+						        $("#panel").html(this.id);
+						        break; 
+						}
+						$("#panel").slideToggle("600");
+					}
+					
 				}
 				else{
 					switch (this.id) {
@@ -117,8 +147,62 @@
 			    
 		  });
 		});
-	</script>
 	
+            
+        </script>
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        	<!-- Indicators -->
+        	<ol class="carousel-indicators">
+        		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        	</ol>
+
+        	<!-- Wrapper for slides -->
+        	<div class="carousel-inner">
+        		<div class="item active">
+        			<img style="min-height:500px;" src="http://www.ansonika.com/edu/images/slides/slide-3.jpg" alt="...">
+        			<div class="carousel-caption">
+        				...
+        			</div>
+        		</div>
+        		<div class="item">
+        			<img style="min-height:500px;"  height="150%" src="http://www.ansonika.com/edu/images/slides/slide-intro.jpg" alt="...">
+        			<div class="carousel-caption">
+        				...
+        			</div>
+        		</div>
+        		<div class="item">
+        			<img style="min-height:500px;"  height="150%" src="http://www.ansonika.com/edu/images/slides/slide-2.jpg" alt="...">
+        			<div class="carousel-caption">
+        				...
+        			</div>
+        		</div>
+    
+        	</div>
+
+        	<!-- Controls -->
+        	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        		<span class="glyphicon glyphicon-chevron-left"></span>
+        	</a>
+        	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        		<span class="glyphicon glyphicon-chevron-right"></span>
+        	</a>
+        </div>
+
+        <div id="card" class="row">
+			<div class="col-md-4 ">
+				<h5>Degrees</h5>
+			</div>
+			<div class="col-md-4">
+				<h5>Bacherlors</h5>
+			</div>
+			<div class="col-md-4">
+				<h5>Masters</h5>
+			</div>
+		</div>
 
     
   </body>

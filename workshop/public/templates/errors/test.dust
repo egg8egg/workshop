@@ -1,46 +1,61 @@
 <script> 
+
+		var lastClickId;
 		$(document).ready(function(){
-			$(".slideDown").click(function(){			  	
+			$(".slideDown").click(function(){
+				lastClickId = this.id;
+			});
+		});
+
+		$(document).ready(function(){
+			$(".slideDown").click(function(){
+
 				if($("#panel").is(":visible")){
-					$("#panel").fadeOut("fast");
-					switch (this.id) {
-					    case "courses":
-					        $("#panel").html("{>"courses"/}");
-					        break;
-					    case "school":
-					        $("#panel").html("{>"school"/}");
-					        break;
-					    case "about":
-					        $("#panel").html("{>"about"/}");
-					        break;
-					    case "pages":
-					        $("#panel").html("{>"pages"/}");
-					        break;
-					    case "contacts":
-					        $("#panel").html("{>"contacts"/}");
-					        break;
-					    default: 
-					        $("#panel").html(this.id);
-					        break; 
+					if(this.id=lastClickId){
+						$("#panel").fadeOut("fast");
 					}
-					$("#panel").slideToggle("600");
+					else{
+						$("#panel").fadeOut("fast");
+						switch (this.id) {
+						    case "courses":
+						        $("#panel").html('{>"courses"/}');
+						        break;
+						    case "school":
+						        $("#panel").html('{>"school"/}');
+						        break;
+						    case "about":
+						        $("#panel").html('{>"about"/}');
+						        break;
+						    case "pages":
+						        $("#panel").html('{>"pages"/}');
+						        break;
+						    case "contacts":
+						        $("#panel").html('{>"contacts"/}');
+						        break;
+						    default: 
+						        $("#panel").html(this.id);
+						        break; 
+						}
+						$("#panel").slideToggle("600");
+					}
+					
 				}
 				else{
 					switch (this.id) {
 					    case "courses":
-					        $("#panel").html("{>"courses"/}");
+					        $("#panel").html('{>"courses"/}');
 					        break;
 					    case "school":
-					        $("#panel").html("{>"school"/}");
+					        $("#panel").html('{>"school"/}');
 					        break;
 					    case "about":
-					        $("#panel").html("{>"about"/}");
+					        $("#panel").html('{>"about"/}');
 					        break;
 					    case "pages":
-					        $("#panel").html("{>"pages"/}");
+					        $("#panel").html('{>"pages"/}');
 					        break;
 					    case "contacts":
-					        $("#panel").html("{>"contacts"/}");
+					        $("#panel").html('{>"contacts"/}');
 					        break;
 					    default: 
 					        $("#panel").html(this.id);
@@ -51,8 +66,9 @@
 			    
 		  });
 		});
-	</script>
-
+	
+            
+        </script>
 
 
 
