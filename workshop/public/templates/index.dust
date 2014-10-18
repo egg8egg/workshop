@@ -18,11 +18,11 @@
     <![endif]-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
     <!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script-->
 
 	
 
@@ -41,20 +41,6 @@
 	                <li><a href="news-events.html" title="News and Events">News &amp; Events</a> | </li>
 	                <li><a id="myAjax" href="" title="Contact">Contact</a></li>
 	            </ul>
-		    </div>
-
-		    <script>
-		    $(document).ready(function(){
-		    	$("#myAjax").click(function(event){
-		    		event.preventDefault();
-		    		$.ajax({url:"/contacts_ajax",success:function(result){
-		    			$("#ajaxTest").html(result);
-		    		}});
-		    	});
-		    });
-		    </script>
-		    <div id="ajaxText">
-
 		    </div>
 
 		    <div class="col-md-3">
@@ -81,76 +67,7 @@
 	<div id="panel" class="slide-Down-panle">
 		{>"courses"/} 
 	</div>
-	<script> 
-
-		
-		$(document).ready(function(){
-			var lastClickId;
-			$(".slideDown").click(function(){
-				lastClickId = this.id;
-			});
-			$(".slideDown").click(function(){
-
-				if($("#panel").is(":visible")){
-					if(this.id==lastClickId){
-						$("#panel").fadeOut("fast");
-					}
-					else{
-						$("#panel").fadeOut("fast");
-						switch (this.id) {
-						    case "courses":
-						        $("#panel").html('{>"courses"/}');
-						        break;
-						    case "school":
-						        $("#panel").html('{>"school"/}');
-						        break;
-						    case "about":
-						        $("#panel").html('{>"about"/}');
-						        break;
-						    case "pages":
-						        $("#panel").html('{>"pages"/}');
-						        break;
-						    case "contacts":
-						        $("#panel").html('{>"contacts"/}');
-						        break;
-						    default: 
-						        $("#panel").html(this.id);
-						        break; 
-						}
-						$("#panel").slideToggle("600");
-					}
-					
-				}
-				else{
-					switch (this.id) {
-					    case "courses":
-					        $("#panel").html('{>"courses"/}');
-					        break;
-					    case "school":
-					        $("#panel").html('{>"school"/}');
-					        break;
-					    case "about":
-					        $("#panel").html('{>"about"/}');
-					        break;
-					    case "pages":
-					        $("#panel").html('{>"pages"/}');
-					        break;
-					    case "contacts":
-					        $("#panel").html('{>"contacts"/}');
-					        break;
-					    default: 
-					        $("#panel").html(this.id);
-					        break; 
-					}
-					$("#panel").slideToggle("600");
-				}
-			    
-		  });
-		});
 	
-            
-        </script>
-
 
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         	<!-- Indicators -->
@@ -204,7 +121,24 @@
 			</div>
 		</div>
 
-    
+
+
+  <script data-main="/js/app" src="/components/requirejs/require.js"></script>  
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
