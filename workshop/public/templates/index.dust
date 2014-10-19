@@ -17,18 +17,23 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
     <!-- Latest compiled and minified JavaScript -->
-	<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="../js/lib/underscore.js"></script>
+	<script src="../js/lib/backbone.js"></script>
+	<script src="../js/myFunctions.js"></script>
 
 	
 
    
   </head>
-  <body background-img="http://www.ansonika.com/edu/img/pattern.jpg";>
+  <body>
+ <!--header start-->	
 	<div class="row">
 		<div class = "top-head-container">		
 		    <div class="col-md-5">
@@ -50,7 +55,10 @@
 		    </div>		  	
 		</div>
 	</div>
-	
+ <!--header end-->
+
+
+ <!--navigation bar start-->
 	<div class="row">
 		<div class="navbar-container">
 			<ul class="nav nav-pills">
@@ -65,10 +73,15 @@
 		</div>
 	</div>
 	<div id="panel" class="slide-Down-panle">
-		{>"courses"/} 
+		<!--view to be add by viewSelector-->
 	</div>
-	
+	<script>						
+  		viewSelector('{>"courses"/}','{>"school"/}','{>"about"/}','{>"pages"/}','{>"contacts"/}')
+    </script>
+ <!--navigation bar end-->
 
+
+ <!--slider start-->
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         	<!-- Indicators -->
         	<ol class="carousel-indicators">
@@ -82,19 +95,42 @@
         		<div class="item active">
         			<img style="min-height:500px;" src="http://www.ansonika.com/edu/images/slides/slide-3.jpg" alt="...">
         			<div class="carousel-caption">
-        				...
+        				<div class="slidertext">
+        					<h1>This is the css animation!</h1>
+        					<p><a href="all-courses.html" title="Courses" class="btn btn-primary btn-lg">Read more</a></p>
+        				</div>
         			</div>
         		</div>
         		<div class="item">
-        			<img style="min-height:500px;"  height="150%" src="http://www.ansonika.com/edu/images/slides/slide-intro.jpg" alt="...">
+        			<img style="min-height:500px;"  height="150%" src="http://www.ansonika.com/edu/images/slides/slide-1.jpg" alt="...">
         			<div class="carousel-caption">
-        				...
+        				<div >
+        					
+        					<img id="icon1" src="http://www.ansonika.com/edu/images/slides/icon-slide-1.png" alt="...">
+        					<img id="icon2" src="http://www.ansonika.com/edu/images/slides/icon-slide-2.png" alt="...">
+        					<img id="services" src="http://www.ansonika.com/edu/images/slides/diagram.png" alt="...">
+        					<img id="icon3" src="http://www.ansonika.com/edu/images/slides/icon-slide-3.png" alt="...">
+        					<img id="icon4" src="http://www.ansonika.com/edu/images/slides/icon-slide-4.png" alt="...">
+        				</div>
         			</div>
         		</div>
+        		
         		<div class="item">
         			<img style="min-height:500px;"  height="150%" src="http://www.ansonika.com/edu/images/slides/slide-2.jpg" alt="...">
         			<div class="carousel-caption">
-        				...
+        				<div class="slidertext">
+        					<h1>Different Courses Avaliable</h1>
+        					<p><a href="all-courses.html" title="Courses" class="btn btn-primary btn-lg">Read more</a></p>
+        				</div>
+        			</div>
+        		</div>
+
+        		<div class="item">
+        			<img style="min-height:500px;"  height="150%" src="http://www.ansonika.com/edu/images/slides/slide-intro.jpg" alt="...">
+        			<div class="carousel-caption">
+        				<div >
+        					<img id="bigLogo" src="http://www.ansonika.com/edu/images/slides/logo.png" alt="...">
+        				</div>
         			</div>
         		</div>
     
@@ -108,22 +144,248 @@
         		<span class="glyphicon glyphicon-chevron-right"></span>
         	</a>
         </div>
+ <!--slider end-->
 
+
+ <!--color card start-->
         <div id="card" class="row">
 			<div class="col-md-4 ">
-				<h5>Degrees</h5>
+				<div id="green" class="box">
+					<a href="all-courses.html" title="All Courses">	                		           
+	                    <div class="col-md-10" style="margin-top:-15px">
+	                    	<h3>Courses</h3>
+	                        <p>Lorem ipsum dolor sit amet, dicta aliquip ad vix, ne sit everti corpora. Qui cu eros feugiat, elitr iudico ad pri.</p>
+	                    </div>	
+	                    <div class="col-md-2" style="margin-left:-40px">
+	                    	<img src="http://www.ansonika.com/edu/img/icon-home-course.png" alt="">
+	                    </div>                    
+                	</a>
+				</div>	
 			</div>
-			<div class="col-md-4">
-				<h5>Bacherlors</h5>
+			<div class="col-md-4 ">
+				<div id="orange"  class="box">
+					<a href="all-courses.html" title="All Courses">	                		           
+	                    <div class="col-md-10" style="margin-top:-15px">
+	                    	<h3>Apply now</h3>
+	                        <p>Lorem ipsum dolor sit amet, dicta aliquip ad vix, ne sit everti corpora. Qui cu eros feugiat, elitr iudico ad pri.</p>
+	                    </div>	
+	                    <div class="col-md-2" style="margin-left:-40px">
+	                    	<img src="http://www.ansonika.com/edu/img/icon-home-apply.png" alt="">
+	                    </div>                    
+                	</a>
+				</div>				
 			</div>
-			<div class="col-md-4">
-				<h5>Masters</h5>
+			<div class="col-md-4 ">
+				<div id="pink" class="box">
+					<a href="all-courses.html" title="All Courses">	                		           
+	                    <div class="col-md-10" style="margin-top:-15px">
+	                    	<h3>Plan a visit</h3>
+	                        <p>Lorem ipsum dolor sit amet, dicta aliquip ad vix, ne sit everti corpora. Qui cu eros feugiat, elitr iudico ad pri.</p>
+	                    </div>	
+	                    <div class="col-md-2" style="margin-left:-40px">
+	                    	<img src="http://www.ansonika.com/edu/img/icon-home-visit.png" alt="">
+	                    </div>                    
+                	</a>
+				</div>				
 			</div>
 		</div>
+ <!--color card end-->
 
 
+ <!--main body start-->
+  <div id="main" class="row">
+  	<div class="col-md-3">
+  		<div id="up" class="row">
+  			<div class="upbox">
+              <span class="glyphicon glyphicon-th"></span>
+       		  <h3>Expert teachers</h3>
+              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
+            </div>
+            <hr class="lightcolor">
+            <div class="upbox">
+              <span class="glyphicon glyphicon-search"></span>
+       		  <h3>Video Courses</h3>
+              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
+            </div>
+            <hr class="lightcolor">
+            <div class="upbox">
+              <span class="glyphicon glyphicon-film"></span>
+       		  <h3>Library</h3>
+              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
+            </div>
+            <hr class="lightcolor">
+            <div class="upbox">
+              <span class="glyphicon glyphicon-music"></span>
+       		  <h3>Online courses</h3>
+              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
+            </div>
+  		</div>
+  		<div id="down" class="row">
+  		</div>
+  	</div>
+  	<div class="col-md-9">
+  		<h2>Upcoming courses</h2>
+  		<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
+  		<hr class="lightcolor">
+  		<!--start showbox-->
+  		<div class="showbox">
+	        <div class="row">	        	
+	        	<div class="col-md-3">
+	        		<div class="imgWithIntro">
+	        			<img style="padding:15px" src="http://www.ansonika.com/edu/img/lessons.png" alt="">
+	        			<h5>INTRO</h5>
+	        		</div>
+	        	</div>
+	        	<div class="col-md-9">
+	        		<div class="textWithLink">
+	        			<h4>Autem possim his</h4>
+	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
+	        			<ul>
+	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
+	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
+	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
+	        			</ul>
+	        		</div>
+	        	</div>	            
+	        </div>
+        </div>
+        <!--end showbox-->
+        <hr class="lightcolor">
+        <!--start showbox-->
+        <div class="showbox">
+	        <div class="row">	        	
+	        	<div class="col-md-3">
+	        		<div class="imgWithIntro">
+	        			<img src="http://www.ansonika.com/edu/img/teacher.jpg" alt="">
+	        			<h5>HTML5</h5>
+	        		</div>
+	        	</div>
+	        	<div class="col-md-9">
+	        		<div class="textWithLink">
+	        			<h4>Autem possim his</h4>
+	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
+	        			<ul>
+	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
+	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
+	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
+	        			</ul>
+	        		</div>
+	        	</div>	            
+	        </div>
+        </div>
+        <!--end showbox-->
+         <hr class="lightcolor">
+        <!--start showbox-->
+        <div class="showbox">
+	        <div class="row">	        	
+	        	<div class="col-md-3">
+	        		<div class="imgWithIntro">
+	        			<img src="http://www.ansonika.com/edu/img/teacher-2.jpg" alt="">
+	        			<h5>CSS3</h5>
+	        		</div>
+	        	</div>
+	        	<div class="col-md-9">
+	        		<div class="textWithLink">
+	        			<h4>Autem possim his</h4>
+	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
+	        			<ul>
+	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
+	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
+	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
+	        			</ul>
+	        		</div>
+	        	</div>	            
+	        </div>
+        </div>
+        <!--end showbox-->
+        <hr class="lightcolor">
+        <!--start showbox-->
+        <div class="showbox">
+	        <div class="row">	        	
+	        	<div class="col-md-3">
+	        		<div class="imgWithIntro">
+	        			<img src="http://www.ansonika.com/edu/img/teacher-3.jpg" alt="">
+	        			<h5>BOOTSTRAP</h5>
+	        		</div>
+	        	</div>
+	        	<div class="col-md-9">
+	        		<div class="textWithLink">
+	        			<h4>Autem possim his</h4>
+	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
+	        			<ul>
+	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
+	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
+	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
+	        			</ul>
+	        		</div>
+	        	</div>	            
+	        </div>
+        </div>
+        <!--end showbox-->
+        <hr class="lightcolor">
+        <div style="text-align:center">
+        	<a href="all-courses.html" title="Courses" class="btn btn-primary btn-lg">view all courses</a>
+        </div>
+  	</div>
+  </div>
+ <!--main body end-->
 
-  <script data-main="/js/app" src="/components/requirejs/require.js"></script>  
+ <!--footer start-->
+ 	<div id="footer" class="row">
+
+ 		<div class="col-md-4">
+	 		<div id="logo" class="footerContainer">
+	   	    	<p><img src="http://www.ansonika.com/edu/img/logo-footer.jpg" alt=""></p>
+	            <p>Copyright © 2013</p>
+	            <a href="" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-cloud"></span>Follow on Twitter</a>
+				<a href="" class="btn btn-primary btn-sm facebook"><span class="glyphicon glyphicon-cloud"></span>Follow on Facebook</a>
+	        </div>
+ 		</div>
+ 		<div class="col-md-4">
+	 		<div id="contacts-footer" class="footerContainer">
+	        	<h4>Contacts</h4>
+	            <ul>
+	            	<li><span class="glyphicon glyphicon-home"></span></i> 11 Fifth Ave, Loftus - NEW JERSEY, US</li>
+	            	<li><span class="glyphicon glyphicon-phone"></span></i> Telephone: + 61 (2) 8093 3400</li>
+	                <li><span class="glyphicon glyphicon-print"></span></i> Fax: +61 (2) 9542 3599</li>
+	                <li><span class="glyphicon glyphicon-envelope"></span></i> Email: <a href="#">submissions@domain.com</a></li>
+	            </ul>
+	            <hr class="lightcolor">
+	        	<h4>Newsletter</h4>
+	            <p>Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
+	           <form role="form">
+	           		<input type="email" class="form-control" id="email" placeholder="Enter email">
+	           		<br>
+	           		<button type="submit" class="btn btn-primary">Submit</button>
+	           </form> 
+	           
+	              
+	        </div>
+	 	</div>
+ 		<div class="col-md-4">
+ 			<div class="footerContainer" id="quick-links">
+        	<h4>Quick links</h4>
+            <ul>
+            	<li><a href="#">Admissions</a></li>
+                <li><a href="#">Administration</a></li>
+            	<li><a href="#">Courses</a></li>
+                <li><a href="#">Departments and Programs</a></li>
+                <li><a href="#">Summer sessions</a></li>
+            </ul>
+            <hr class="lightcolor">
+            <ul>
+            	<li><a href="#">Degrees &amp; Majors</a></li>
+            	<li><a href="#">Master's online</a></li>
+                <li><a href="#">Professional Courses</a></li>
+                <li><a href="#">Bacherlor's</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Departments and Programs</a></li>
+            </ul>
+        </div>
+ 		</div>
+ 	</div>
+ <!--footer end-->
+
   </body>
 </html>
 

@@ -2,51 +2,51 @@
 <div class="row marginDiv">
 	<div class="col-md-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-star"></span> play with glyphicon
+		  	<span class="glyphicon glyphicon-star"></span> I like
 		</button>
 	</div>
 	<div class="col-md-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-music"></span> play with glyphicon
+		  	<span class="glyphicon glyphicon-music"></span> play with
 		</button>
 	</div>
 	<div class="col-md-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-glass"></span> play with glyphicon
-		</button>
-	</div>
-</div>
-<div class="row marginDiv">
-	<div class="col-md-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-th"></span> play with glyphicon
-		</button>
-	</div>
-	<div class="col-md-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-search"></span> play with glyphicon
-		</button>
-	</div>
-	<div class="col-md-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-film"></span> play with glyphicon
+		  	<span class="glyphicon glyphicon-glass"></span> bootstrap
 		</button>
 	</div>
 </div>
 <div class="row marginDiv">
 	<div class="col-md-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-camera"></span> play with glyphicon
+		  	<span class="glyphicon glyphicon-th"></span> glyphicon 
 		</button>
 	</div>
 	<div class="col-md-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-print"></span> play with glyphicon
+		  	<span class="glyphicon glyphicon-search"></span> and other
 		</button>
 	</div>
 	<div class="col-md-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-upload"></span> play with glyphicon
+		  	<span class="glyphicon glyphicon-film"></span> components
+		</button>
+	</div>
+</div>
+<div class="row marginDiv">
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-camera"></span> le so 
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-print"></span> ha la
+		</button>
+	</div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-upload"></span> ba ru 
 		</button>
 	</div>
 </div>

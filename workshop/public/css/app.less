@@ -1,5 +1,22 @@
 @import "veriable";
 
+body{
+	background-image:url('http://www.ansonika.com/edu/img/pattern.jpg');
+}
+a{
+	color:@box-color;
+}
+ul {
+	padding-left:0;
+    list-style-type: none;
+    text-align:left;
+    font-size: @small-font-size;
+    font-weight:@light-font-weight;
+    &.courses{
+    	font-size:@mid-font-size;
+    }
+
+}
 .top-head-container {
 	
 	background-color: @top-header-color;
@@ -98,7 +115,31 @@ hr{
 	border: 0;
 	border-top: 1px solid #25282d;
 	border-bottom: 1px solid #414750;
+	&.lightcolor{
+	
+		border-bottom-color: rgb(255, 255, 255);
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-image-outset: 0px;
+		border-image-repeat: stretch;
+		border-image-slice: 100%;
+		border-image-source: none;
+		border-image-width: 1;
+		border-left-color: rgb(46, 65, 92);
+		border-left-style: none;
+		border-left-width: 0px;
+		border-right-color: rgb(46, 65, 92);
+		border-right-style: none;
+		border-right-width: 0px;
+		border-top-color: rgb(206, 222, 231);
+		border-top-style: solid;
+		border-top-width: 1px;
+		color: rgb(46, 65, 92);
+		display: block;
+	
+	}
 }
+
 
 .marginDiv{
 	margin:15px 5px 15px 5px;
@@ -106,18 +147,399 @@ hr{
 
 
 #card{
-	position: absolute;
-	z-index: 999;
-	margin-top:-20px;
-	width:auto;
-	padding-left:100px;
+	margin-top:-25px;
+	margin-bottom: 15px;
+	width:1100px;
+	padding-left:120px;
+	.box{
+		height:190px;
+		width:290px;
+		padding: 15px;
+		border: 8px solid rgb(0, 173, 224);
+		border-radius: 5px;
+		box-shadow: 5px 5px 3px #888888;
+		background-color: @box-color;
+		a{
+			width:250px;
+			color:white;
+			h3{
+				color:rgb(255, 255, 153);
+			}
+		}
+	}
+	#green{
+		transition: background-color 2s, border-color 2s;
+	}
+	#green:hover{
+		background-color: #47A347;
+		border-color:#61A361;
+	}
+
+	#orange{
+		transition: background-color 2s, border-color 2s;
+	}
+	#orange:hover{
+		background-color: #FF8330;
+		border-color:#FF8F45;
+	}
+
+	#pink{
+		transition: background-color 2s, border-color 2s;
+	}
+	#pink:hover{
+		background-color: #FF6699;
+		border-color:#FF75A3;
+	}
 	
-	h5{
-		height:100px;
-		width:100px;
-		background-color: @navBar-hover-color;
+}
+
+
+	#bigLogo{
+		width: 300px;
+	    height: 250px;
+	    position: relative;
+	    -webkit-animation: logoin 2s; /* Chrome, Safari, Opera */
+	    animation: logoin 2s;
+	}
+	/* Chrome, Safari, Opera */
+@-webkit-keyframes logoin {
+    0%   {left:-100px; top:-100px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotate3d(1,-1,1,230deg)}
+    100% {left:0px; top:0px;width: 300px; height:250px;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
+}
+
+.carousel-caption{
+	padding-bottom:100px;
+}
+
+
+.carousel-caption{
+	#services{
+		z-index:10;
+		position: absolute;
+		left: 170px;
+		top: -220px;
+		-webkit-animation: services 0.8s; /* Chrome, Safari, Opera */
+	    animation: services 1s;
+	}
+	@-webkit-keyframes services {
+    0%   {left:-100px; top:-100px;width: 1px; height:1px;opacity: 0;transform: rotate(280deg)}
+    100% {left:170px; top:-220px;width: 360px; height:249px;opacity: 1;transform: rotate(0deg)}
+	}
+
+	#icon1{
+		width:180px;
+		height:90px;
+		z-index:11;
+		position: absolute;
+		left: 40px;
+		top: -10px;
+		-webkit-animation: icon1 1.8s; /* Chrome, Safari, Opera */
+	    animation: icon1 3s;
+	   
+	}
+	@-webkit-keyframes icon1 {
+    0%   {left:-500px; top:500px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotate3d(1,-1,1,230deg)}
+    100% {left:40px; top:-10px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
+    }
+
+	#icon2{
+		width:180px;
+		height:90px;
+		z-index:12;
+		position: absolute;
+    	left: 470px;
+    	top:-10px;
+    	-webkit-animation: icon2 2.8s; /* Chrome, Safari, Opera */
+	    animation: icon2 5s;
+	    
+	}
+	@-webkit-keyframes icon2 {
+    0%   {left:1300px; top:1300px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotateX(360deg)}
+    100% {left:470px; top:-10px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotateX(0deg)}
+    }
+
+	#icon3{
+		width:180px;
+		height:90px;
+		z-index:13;
+		position: absolute;
+		left: 20px;
+		top: -240px;
+		-webkit-animation: icon3 3.8s; /* Chrome, Safari, Opera */
+	    animation: icon3 7s;
+	    
+	}
+	@-webkit-keyframes icon3 {
+    0%   {left:-2800px; top:-2800px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotate3d(-1,-1,1,330deg)}
+    100% {left:20px; top:-240px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
+    }
+
+	#icon4{
+		width:180px;
+		height:90px;
+		z-index:14;
+		position: absolute;
+    	left: 480px;
+    	top:-240px;
+    	-webkit-animation: icon4 4.8s; /* Chrome, Safari, Opera */
+	    animation: icon4 9s;
+	    
+    	
+	}
+	@-webkit-keyframes icon4 {
+    0%   {left:4000px; top:-4000px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotateX(-230deg)}
+    100% {left:480px; top:-240px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotateX(0deg)}
+    }
+}
+
+.slidertext{
+	
+	h1{
+		height:70px;
+		position: absolute;
+		right: 0px;
+		top: -200px;
+		font-size: 45px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 800;
+		background-color:@top-header-color;
+		padding:10px;
+		-webkit-animation: h1 1.5s; /* Chrome, Safari, Opera */
+	    animation: h1 1.5s;   	
+	}
+	@-webkit-keyframes h1 {
+    0%   {right:100px;top:-300px; opacity: 0.5}
+    100% {right:0px;top:-200px; opacity: 1}
+    }
+
+	p{
+		position: absolute;
+		right: 0px;
+		top: -90px;
+		
+	}
+
+}
+
+.col-md-4>.btn-default{
+	height: 50px;
+	text-align: left;
+	width:200px;
+	color:white;
+	background-color: #424952;
+	border-radius:5px;
+	border-color:#425962;
+	transition: background-color 2s, border-color 2s;
+	&:hover{
+				background-color: @box-color;
+				border-color:@box-color;
+			}
+	.glyphicon{
+		position: absolute;
+		right: 50px;
+		top:10px;
+		font-size:30px;
 	}
 }
+
+#main{
+	margin-top:50px;
+	padding-left:135px;	
+	>.col-md-3{
+		height:990px;
+		width:300px;
+		
+		margin-right:25px;
+		
+		
+		.row{
+			padding:20px;
+			border: 3px solid rgb(220, 220, 220);
+			border-radius: 5px;
+			box-shadow: 5px 5px 3px #888888;
+
+		}
+		#up{
+				height:790px;
+				margin-bottom:60px;
+				background-color: rgb(234, 249, 255);
+				background-image: url(http://www.ansonika.com/edu/img/sticker-1.png);
+				background-repeat: no-repeat;
+				background-position: top right;
+				.upbox{
+					color:rgb(51, 51, 51);
+					.glyphicon{
+						font-size:30px;
+						color:rgb(255, 102, 102);
+						float:left;
+						padding:0px 25px 100px 10px;
+					}
+
+				}
+			}
+			#down{
+			 	height:240px;
+			 	background-size: 330px 240px;
+			 	padding:0px;
+			 	background-image: url("http://www.ansonika.com/edu/img/banner.jpg");
+			 	
+			}
+		
+		
+	}
+	>.col-md-9{
+		height:1230px;
+		width:620px;
+		padding:15px 35px 15px 35px;
+		background-color: white;
+		border: 3px solid rgb(240, 240, 240);
+		border-radius: 5px;
+		box-shadow: 5px 5px 3px #888888;
+		
+	}
+
+	
+}
+
+.showbox{
+	display: block;
+	width:560px;
+	height:190px;
+	.imgWithIntro{
+		margin-top:10px;
+		width:130px;
+		height:120px;
+		background-color: rgb(234, 249, 255);
+		border: 0px solid rgb(240, 240, 240);
+		border-radius: 8px;
+		img{
+			display: block;
+    		margin: auto;
+    		max-width:100%;
+			max-height:100%;
+			border: 0px solid rgb(240, 240, 240);
+			border-radius: 8px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+
+		}
+		h5{
+			padding:3px;
+			text-align: center;
+			width:130px;
+			margin:auto;
+			background-color: black;
+			color:rgb(234, 249, 255);
+			border: 0px solid rgb(240, 240, 240);
+			border-radius: 3px;
+		}
+	}
+	ul {
+		    padding-left:0px;
+		    list-style-type: none;
+		    color: black;
+		    font-size: @small-font-size;
+		    font-weight:300;
+		    li{
+				display: inline;
+				padding: 8px;
+				a{
+					color:black;
+				}
+				span{
+					padding-right:5px;
+				}
+			}
+		}
+}
+
+
+.btn-primary{
+			
+	background-color: @box-color;
+	transition: background-color 2s, border-color 2s;
+	&.facebook{
+			
+		background-color: @facebook-color;
+		transition: background-color 2s, border-color 2s;
+		&:hover{
+			background-color: @top-header-color;
+			border-color:@top-header-color;
+		}
+	}
+	&:hover{
+		background-color: @top-header-color;
+		border-color:@top-header-color;
+	}
+}
+
+			
+		
+
+#footer{
+	text-align:center;
+	margin-top:80px;
+	padding:30px;
+	display:block;
+	background-color:white;
+	height:auto;
+	width:auto;
+	ul{
+		font-weight:@light-font-weight+100;
+		font-size:@small-font-size+1;
+		li{
+			margin:3px;
+		}
+	}
+	.footerContainer{
+		padding:20px;
+	}
+	#quick-links{
+		text-align:left;
+	}
+	#contacts-footer{
+		text-align:left;
+		span{
+			padding:3px;
+		}
+		li{
+			padding-bottom: 2px;
+		}
+		
+	}
+	#logo{
+		a{
+			margin:10px;
+			width:140px;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

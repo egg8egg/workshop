@@ -3,7 +3,7 @@
 
 		<div class="col-md-3">
 			<h4>Quick links</h4>
-			<ul>
+			<ul class="courses">
 				<li><a href="all-courses.html" title="All courses">All courses</a></li>
 				<li><a href="course-detail.html" title="Course detail">Course detail</a></li>
 				<li><a href="staff.html" title="Meet the team">Meet the team</a></li>
