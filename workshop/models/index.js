@@ -2,6 +2,8 @@
 
 module.exports = function IndexModel(){
 	return {
-		viewName:"school"
+		"viewPath":"pages/home",
+		"title":"Home"
+
 	};
 } ;

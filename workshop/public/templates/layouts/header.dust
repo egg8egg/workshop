@@ -1,0 +1,57 @@
+<!--header start-->	
+	<div class="row">
+		<div class = "top-head-container">		
+		    <div class="col-md-5">
+			    <img class="hidden-xs hidden-sm" src="http://www.ansonika.com/edu/img/logo.png">
+			    </img>
+			    <img class="visible-xs visible-sm" src="http://www.ansonika.com/edu/img/logo-mobile.png">
+			    </img>			    
+		    </div>
+		    <div class="col-md-4">
+		    	
+		    		<ul>
+	                <li><a href="index.html" title="Home">Home</a> | </li>
+	                <li><a href="news-events.html" title="News and Events">News &amp; Events</a> | </li>
+	                <li><a id="myAjax" href="" title="Contact">Contact</a></li>
+	            </ul>	
+		    	
+				
+		    </div>
+
+		    <div class="hidden-xs hidden-sm col-md-3">
+		    	<div class="head-block">
+		    		<img src="http://www.ansonika.com/edu/img/icon-phone.png"></img>
+			    	<strong>+44 (0) 123 456 789</strong> </br>
+					"Admissons department"
+		    	</div>    			
+		    </div>		  	
+		</div>
+	</div>
+  <!--desktop navigation bar start-->
+	<div class="hidden-xs hidden-sm row">
+		<div class="navbar-container">
+			<ul class="nav nav-pills">
+			  <li><a id="courses" href="#" class="slidedown">COURSES</a></li>
+			  <li><a id="school" href="#" class="slidedown">SCHOOL & ACADEMICS</a></li>
+			  <li><a id="about" href="#" class="slidedown">ABOUT</a></li>
+			  <li><a id="pages" href="#" class="slidedown">PAGES</a></li>
+			  <li><a id="blog" href="#" >BLOG</a></li>
+			  <li><a id="drop" href="#" class="slidedown">SIMPLE DROP</a></li>
+			  <li><a id="contacts" href="#" class="slidedown">CONTACTS</a></li>		  
+			</ul>
+		</div>
+	</div>
+
+	<div id="panel" class="slide-dwn-panle">
+		<!--view to be add by viewSelector-->
+	</div>
+ <!--desktop  navigation bar end-->
+
+ <!--mobile navigation bar start-->
+	<div class="visible-xs visible-sm">
+		<div class="navbar-container">
+		</div>
+	</div>
+ <!--mobile  navigation bar end-->
+
+ <!--header end-->

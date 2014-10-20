@@ -17,26 +17,45 @@ ul {
     }
 
 }
+
 .top-head-container {
-	
-	background-color: @top-header-color;
-	display: block;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;
+	width:auto;
 	height: auto;
-	min-height: 60px;
+	min-height:60px;
+	text-align:center;
+	display: block;	
 	padding-bottom: 8px;
 	padding-left: 110px;
 	padding-right: 110px;
 	padding-top: 8px;
-	width: auto;
-
+	background-color: @top-header-color;
+	.col-md-5{
+		img{
+			
+		    margin: auto;
+		    top: 5;
+		    left: 0;
+		    right: 0;
+		    bottom: 5;
+		}
+	}
+	.head-block{
+		width:200px;
+		margin:auto;
+	}
 	.col-md-3{
+
 		padding-top:5px;
 		color: white;
-		background-image: url('http://www.ansonika.com/edu/img/icon-phone.png');
-		background-position:170px 0; 
-		background-repeat: no-repeat;
 		font-size:@small-font-size;
 		font-weight:@light-font-weight;
+		img{
+			float:right;
+		}
 		strong{
 			color:@phone-color;
 			font-size:16px;
@@ -44,9 +63,13 @@ ul {
 	}
 
 	.col-md-4{
+
 		padding-top:8px;
 		padding-left:15px;
 		ul {
+			max-width:170px;
+			width:auto;
+			margin:auto;
 		    padding-left:0px;
 		    list-style-type: none;
 		    color: white;
@@ -86,7 +109,7 @@ ul {
 	}
 }
 
-.slide-Down-panle{
+.slide-down-panle{
 	background-color:@top-header-color;
 	height: auto;
 	width:auto;
@@ -106,9 +129,33 @@ ul {
 		font-size: @small-font-size;
 		font-weight: @light-font-weight;
 	}
-
-
 }
+
+.drop-down-panle{
+	
+	position: absolute;
+	left:535px;
+    z-index: 1000;
+    display:none;
+    .droppad{
+    	text-align: center;
+    	padding-top:0.2px;
+    	display:block;
+    	margin:10px;
+    	border:0 splid @box-color;
+    	border-radius:5px;
+    	height:35px;
+    	width:100px;
+    	background-color:lighten(@box-color,20%);
+    	transition: background-color 2s, border-radius 2s;
+    	&:hover{
+    		background-color:@pink;
+    		border-radius:20px;
+    	}
+    }
+}
+
+
 
 hr{
 	margin: 20px 0 20px 0;
@@ -147,14 +194,16 @@ hr{
 
 
 #card{
-	margin-top:-25px;
+	margin-top:-45px;
 	margin-bottom: 15px;
-	width:1100px;
-	padding-left:120px;
+	margin-left:auto;
+	margin-right:auto;
+	width:auto;
 	.box{
-		height:190px;
-		width:290px;
-		padding: 15px;
+		height:auto;
+		width:auto;
+		padding:15px;
+		margin: 15px;
 		border: 8px solid rgb(0, 173, 224);
 		border-radius: 5px;
 		box-shadow: 5px 5px 3px #888888;
@@ -166,29 +215,32 @@ hr{
 				color:rgb(255, 255, 153);
 			}
 		}
+		img{
+			float:right;
+		}
 	}
 	#green{
 		transition: background-color 2s, border-color 2s;
 	}
 	#green:hover{
-		background-color: #47A347;
-		border-color:#61A361;
+		background-color:@green;
+		border-color:lighten(@green,10%);
 	}
 
 	#orange{
 		transition: background-color 2s, border-color 2s;
 	}
 	#orange:hover{
-		background-color: #FF8330;
-		border-color:#FF8F45;
+		background-color: @orange;
+		border-color:lighten(@orange,10%);
 	}
 
 	#pink{
 		transition: background-color 2s, border-color 2s;
 	}
 	#pink:hover{
-		background-color: #FF6699;
-		border-color:#FF75A3;
+		background-color: @pink;
+		border-color:lighten(@pink,10%);
 	}
 	
 }
