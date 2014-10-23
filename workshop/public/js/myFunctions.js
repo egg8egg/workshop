@@ -1,4 +1,26 @@
-function viewSelector(view1,view2,view3,view4,view5,drop){
+$(document).ready(function(){
+    $(".slidedown").click(function() {
+    	if($(this).next("div").is(":visible")){
+    		$(this).next("div").slideToggle("slow");
+    	}
+    	else{
+    		if($(".slide-down-panle").is(":visible")){
+    			$(".slide-down-panle").hide();
+    			$(this).next("div").slideToggle("slow");
+    		}
+    		else{
+    			$(this).next("div").slideToggle("slow");
+    		}
+    	}	   	
+    });
+  });
+
+
+
+
+//this function is for view select. Not useing anymore 
+
+/*function viewSelector(view1,view2,view3,view4,view5,drop){
 			var lastClickId;
 			$(".slidedown").click(function(){
 				if(this.id=="drop"){
@@ -66,9 +88,8 @@ function viewSelector(view1,view2,view3,view4,view5,drop){
 				$("#panel").slideToggle("slow");
 			}
 			lastClickId = this.id;
-		  });
-		
-}
+		  });		
+}*/
 
   
   

@@ -1,5 +1,120 @@
 @import "veriable";
 
+@media all and (min-width:768px){
+	.carousel-inner{
+		>.item{
+			>img{
+				min-height:40vw;
+			}
+		}
+	}
+	#imgroup{	
+		position:relative;
+		    top:-20vw;	
+	}
+	.slide-down-panle{
+		width:87vw;		
+	}
+	#b{left:-86px;}
+	#c{left:-246px;}
+	#d{left:-315px;}
+	#e{left:-553px;}
+	.nav.navbar-nav{
+		margin-left:60px;
+	}
+	.col-md-5.col-sm-6{
+		
+		img{			
+		    position:absolute;
+		    left:40px;
+		}
+		
+	}
+	.droppad{width:100px;}
+	.col-md-4>.btn-default{	
+		width:200px;	
+	}
+
+	#main{
+		>.col-md-3{			
+			width:31vw;	
+			.glyphicon{
+			font-size:30px;
+			}
+			#down{
+				img{
+			 		height:auto;
+			 		width:28vw;
+			 	}
+			}		
+		}
+		>.col-md-9{
+		width:62vw;
+		}	
+	}
+}
+
+@media all and (max-width:767px){
+	.carousel-inner{
+		>.item{
+			>img{
+				min-height:60vw;
+			}
+		}
+	}
+	#imgroup{	
+		position:relative;
+		    top:-30vw;	
+	}
+	.slide-down-panle{
+		width:100%;
+	}
+	.nav.navbar-nav{
+		padding:5px 5px 5px 5px;
+	}
+	.col-md-5.col-sm-6{
+		img{			
+		    margin: auto;
+		    top: 5;
+		    left: 0;
+		    right: 0;
+		    bottom: 5;
+		}
+	}
+	.navbar-collapse.in {
+			overflow-y: visible;
+	}
+	.droppad{width:95vw;}
+	.col-md-4>.btn-default{
+		width:100%;
+	}
+
+	#main{
+		>.col-md-3{			
+			width:90vw;	
+			.glyphicon{
+			font-size:50px;
+			padding:5px 10px 40px 10px;
+			}
+			#down{
+				img{
+			 		height:auto;
+			 		width:85vw;
+			 	}
+			}		
+		}
+		>.col-md-9{
+		width:84vw;
+		margin-left:15px;
+		}	
+	}
+}
+
+.row{
+	margin-left:0px;
+	margin-right:0px;
+}
+
 body{
 	background-image:url('http://www.ansonika.com/edu/img/pattern.jpg');
 }
@@ -28,21 +143,9 @@ ul {
 	min-height:60px;
 	text-align:center;
 	display: block;	
-	padding-bottom: 8px;
-	padding-left: 110px;
-	padding-right: 110px;
-	padding-top: 8px;
+	padding:8px 50px 8px 50px;
 	background-color: @top-header-color;
-	.col-md-5{
-		img{
-			
-		    margin: auto;
-		    top: 5;
-		    left: 0;
-		    right: 0;
-		    bottom: 5;
-		}
-	}
+
 	.head-block{
 		width:200px;
 		margin:auto;
@@ -87,41 +190,51 @@ ul {
 	
 }
 
-.navbar-container{
+.navbar-collapse{
 
 	background-color: @navBar-color;
 	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
 	background-size: auto;
 	color: rgb(255, 255, 255);
-	display: block;
-	height: 44px;
-	line-height: 20px;
-	width: auto;
-	padding-top: 2px;
-	padding-left:100px;
-
-	.nav-pills>li>a{
+	width:100%;
+	
+	
+	position:absolute;
+	z-index:9999;
+	
+	.nav.navbar-nav{
+		margin-top:0px;
+		margin-bottom:0px;
+	}
+	.navbar-nav>li>a{
 		color: white;
 		font-size:@small-font-size;
+
 		&:hover{
 			background-color: @navBar-hover-color;
 		}
 	}
 }
 
+
 .slide-down-panle{
 	background-color:@top-header-color;
-	height: auto;
-	width:auto;
-	min-width:800px;
-	max-width: 80%;
+	height:auto;
+	
+	
+	padding: 10px 20px 10px 20px;
+	
 	display: none;
 	color: white;
-	border: 30px solid @top-header-color;
+	border: 10px solid @top-header-color;
+	border-radius:10px;
+	border-top-right-radius:0px;
+	border-top-left-radius:0px;
 	border-top-width: 20px;
 	border-left-width: 20px;
-	margin-left:80px;
-	position: absolute;
+	position:absolute;
+	
+	
     z-index: 1000;
 
 	.row p{
@@ -131,10 +244,20 @@ ul {
 	}
 }
 
+.navbar-header{
+	background-color: @navBar-color;
+	a{
+		color:white;
+	}
+	.icon-bar{
+		background-color:white;
+	}
+}
+
 .drop-down-panle{
 	
 	position: absolute;
-	left:535px;
+	left:0px;
     z-index: 1000;
     display:none;
     .droppad{
@@ -145,15 +268,16 @@ ul {
     	border:0 splid @box-color;
     	border-radius:5px;
     	height:35px;
-    	width:100px;
+    	
     	background-color:lighten(@box-color,20%);
     	transition: background-color 2s, border-radius 2s;
     	&:hover{
     		background-color:@pink;
     		border-radius:20px;
     	}
-    }
-}
+   }
+ }
+
 
 
 
@@ -209,6 +333,7 @@ hr{
 		box-shadow: 5px 5px 3px #888888;
 		background-color: @box-color;
 		a{
+			text-decoration:none;  
 			width:250px;
 			color:white;
 			h3{
@@ -247,111 +372,122 @@ hr{
 
 
 	#bigLogo{
-		width: 300px;
-	    height: 250px;
-	    position: relative;
+		width: 25vw;
+	    height: auto;
+	    position:relative;
+	    margin:auto;
+	    left:0;
+	    right:0;
+	    bottom:10vw;
 	    -webkit-animation: logoin 2s; /* Chrome, Safari, Opera */
 	    animation: logoin 2s;
 	}
 	/* Chrome, Safari, Opera */
-@-webkit-keyframes logoin {
-    0%   {left:-100px; top:-100px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotate3d(1,-1,1,230deg)}
-    100% {left:0px; top:0px;width: 300px; height:250px;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
-}
-
-.carousel-caption{
-	padding-bottom:100px;
+	@-webkit-keyframes logoin {
+    0%   {left:-100px; bottom:100px;;width: 1px;opacity: 0;-webkit-transform: rotate3d(1,-1,1,230deg)}
+    100% {left:0; bottom:10vw;width: 25vw;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
 }
 
 
+
 .carousel-caption{
+	padding-bottom:3vw;
+
+	#imgroup{	
+		position:relative;
+		 margin: auto;
+		    bottom:10vw;
+		    left: 0;
+		    right: 0;		
+	}
 	#services{
+		height:auto;
+		width:50%;
 		z-index:10;
 		position: absolute;
-		left: 170px;
-		top: -220px;
+		left: 25%;
+		top: 0;
 		-webkit-animation: services 0.8s; /* Chrome, Safari, Opera */
 	    animation: services 1s;
 	}
 	@-webkit-keyframes services {
-    0%   {left:-100px; top:-100px;width: 1px; height:1px;opacity: 0;transform: rotate(280deg)}
-    100% {left:170px; top:-220px;width: 360px; height:249px;opacity: 1;transform: rotate(0deg)}
+    0%   {left:-100px; top:-100px;width: 1px;opacity: 0;transform: rotate(280deg)}
+    100% {left:25%; top:0;width:50%;opacity: 1;transform: rotate(0deg)}
 	}
-
 	#icon1{
-		width:180px;
-		height:90px;
+		height:auto;
+		width:25%;
 		z-index:11;
 		position: absolute;
-		left: 40px;
-		top: -10px;
+		left:6%;
+		top:-1vw;
 		-webkit-animation: icon1 1.8s; /* Chrome, Safari, Opera */
 	    animation: icon1 3s;
 	   
 	}
 	@-webkit-keyframes icon1 {
-    0%   {left:-500px; top:500px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotate3d(1,-1,1,230deg)}
-    100% {left:40px; top:-10px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
+    0%   {left:-500px; top:500px;opacity: 0;-webkit-transform: rotate3d(1,-1,1,230deg)}
+    100% {left:6%;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
     }
 
 	#icon2{
-		width:180px;
-		height:90px;
+		height:auto;
+		width:25%;
 		z-index:12;
-		position: absolute;
-    	left: 470px;
-    	top:-10px;
+		position: relative;
+    	left:52%;
+    	top:18vw;
     	-webkit-animation: icon2 2.8s; /* Chrome, Safari, Opera */
 	    animation: icon2 5s;
 	    
 	}
 	@-webkit-keyframes icon2 {
-    0%   {left:1300px; top:1300px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotateX(360deg)}
-    100% {left:470px; top:-10px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotateX(0deg)}
+    0%   {left:1300px; top:1300px;opacity: 0;-webkit-transform: rotateX(360deg)}
+    100% {left:52%; top:18vw;opacity: 1;-webkit-transform: rotateX(0deg)}
     }
 
 	#icon3{
-		width:180px;
-		height:90px;
+		height:auto;
+		width:25%;
 		z-index:13;
-		position: absolute;
-		left: 20px;
-		top: -240px;
+		position: relative;
+		left: -25%;
+		top: 18vw;
 		-webkit-animation: icon3 3.8s; /* Chrome, Safari, Opera */
 	    animation: icon3 7s;
 	    
 	}
 	@-webkit-keyframes icon3 {
-    0%   {left:-2800px; top:-2800px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotate3d(-1,-1,1,330deg)}
-    100% {left:20px; top:-240px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
+    0%   {left:-2800px; top:-2800px;opacity: 0;-webkit-transform: rotate3d(-1,-1,1,330deg)}
+    100% {left:-25%; top:18vw;opacity: 1;-webkit-transform: rotate3d(0,0,0,0deg)}
     }
 
 	#icon4{
-		width:180px;
-		height:90px;
+		height:auto;
+		width:25%;
 		z-index:14;
-		position: absolute;
-    	left: 480px;
-    	top:-240px;
+		position: relative;
+    	left:4%;
+    	top:-2vw;
     	-webkit-animation: icon4 4.8s; /* Chrome, Safari, Opera */
 	    animation: icon4 9s;
 	    
     	
 	}
 	@-webkit-keyframes icon4 {
-    0%   {left:4000px; top:-4000px;width: 1px; height:1px;opacity: 0;-webkit-transform: rotateX(-230deg)}
-    100% {left:480px; top:-240px;width: 180px; height:90px;opacity: 1;-webkit-transform: rotateX(0deg)}
+    0%   {left:4000px; top:-4000px;opacity: 0;-webkit-transform: rotateX(-230deg)}
+    100% {left:4%; top:-2vw;opacity: 1;-webkit-transform: rotateX(0deg)}
     }
 }
 
 .slidertext{
 	
 	h1{
-		height:70px;
+		height:auto;
 		position: absolute;
 		right: 0px;
 		top: -200px;
-		font-size: 45px;
+		font-size: 30px;
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 800;
@@ -375,9 +511,10 @@ hr{
 }
 
 .col-md-4>.btn-default{
+	margin-bottom:20px;
 	height: 50px;
 	text-align: left;
-	width:200px;
+	
 	color:white;
 	background-color: #424952;
 	border-radius:5px;
@@ -388,21 +525,22 @@ hr{
 				border-color:@box-color;
 			}
 	.glyphicon{
-		position: absolute;
-		right: 50px;
-		top:10px;
+		float:right;
 		font-size:30px;
 	}
 }
 
 #main{
 	margin-top:50px;
-	padding-left:135px;	
+	padding-left:15px;
+	padding-right:15px;
+
 	>.col-md-3{
-		height:990px;
-		width:300px;
+		height:auto;
 		
-		margin-right:25px;
+		margin-right:3vw;
+		
+		
 		
 		
 		.row{
@@ -413,7 +551,8 @@ hr{
 
 		}
 		#up{
-				height:790px;
+				height:auto;
+				width:auto;
 				margin-bottom:60px;
 				background-color: rgb(234, 249, 255);
 				background-image: url(http://www.ansonika.com/edu/img/sticker-1.png);
@@ -425,24 +564,24 @@ hr{
 						font-size:30px;
 						color:rgb(255, 102, 102);
 						float:left;
-						padding:0px 25px 100px 10px;
+						
 					}
 
 				}
 			}
 			#down{
-			 	height:240px;
-			 	background-size: 330px 240px;
 			 	padding:0px;
-			 	background-image: url("http://www.ansonika.com/edu/img/banner.jpg");
+			 	margin-bottom:50px;
+			 	overflow:hidden;
+			 	
 			 	
 			}
 		
 		
 	}
 	>.col-md-9{
-		height:1230px;
-		width:620px;
+		height:auto;
+		
 		padding:15px 35px 15px 35px;
 		background-color: white;
 		border: 3px solid rgb(240, 240, 240);
@@ -456,8 +595,8 @@ hr{
 
 .showbox{
 	display: block;
-	width:560px;
-	height:190px;
+	width:55vw;
+	height:auto;
 	.imgWithIntro{
 		margin-top:10px;
 		width:130px;
