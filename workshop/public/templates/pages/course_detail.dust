@@ -2,29 +2,25 @@
  <!--main body start-->
   <div id="main" class="row">
   	<div class="col-lg-3 col-md-3 col-sm-3">
-  		<div id="up" class="row">
-  			<div class="upbox">
-              <span class="glyphicon glyphicon-th"></span>
-       		  <h3>Expert teachers</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
+  		<div id="up-pages" class="row">
+            <div class="linkbox">
+            	<h5>BROWSE COURSES</h5>
+            	<ul class="submenu-col">
+	                <li><a href="#" id="active">All Courses</a></li>
+	                <li><a href="/course_detail">Administration (10)</a></li>
+	                <li><a href="/course_detail">Business (08)</a></li>
+	                <li><a href="/course_detail">Communication (05) <img src="http://www.ansonika.com/edu/img/new.png" alt="New"></a></li>
+	                <li><a href="/course_detail">Computing (08) </a></li>
+	                <li><a href="/course_detail">Counseling (04)</a></li>
+	                <li><a href="/course_detail">Education (06)</a></li>
+	                <li><a href="/course_detail">Engineering (08)</a></li>
+	            </ul>
             </div>
             <hr class="lightcolor">
             <div class="upbox">
-              <span class="glyphicon glyphicon-search"></span>
-       		  <h3>Video Courses</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
-            </div>
-            <hr class="lightcolor">
-            <div class="upbox">
-              <span class="glyphicon glyphicon-film"></span>
-       		  <h3>Library</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
-            </div>
-            <hr class="lightcolor">
-            <div class="upbox">
-              <span class="glyphicon glyphicon-music"></span>
-       		  <h3>Online courses</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
+            	<h4>Upcomming Courses</h4>
+					<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
+					<button type="button" class="btn btn-danger btn-xs">Read more</button>
             </div>
   		</div>
   		<div id="down" class="row">
@@ -33,9 +29,15 @@
   	</div>
 
   	<div class="col-lg-9 col-md-9 col-sm-9">
-  		<h2>Upcoming courses</h2>
-  		<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
-  		<hr class="lightcolor">
+  		
+  		<div class="pictureWithText">
+  			<img src="http://www.ansonika.com/edu/img/pic-4.jpg" alt="">
+  			
+  			<p>Tibique dolores adversarium ne vel. At vide errem duo, vis luptatum menandri ullamcorper id. </p>
+  		</div>
+  		<div class="takeplace">
+			<img src="http://www.ansonika.com/edu/img/pic-4.jpg" alt=""> 
+		</div>
   		<!--start showbox-->
   		<div class="showbox">
 	        <div class="row">	        	
@@ -132,6 +134,43 @@
         </div>
         <!--end showbox-->
         <hr class="lightcolor">
+        <table class="table table-bordered table-striped">
+							
+							<thead style="background-color:#DEDEDE">
+                            <tr>								
+								<th>Lesson</th>
+								<th>Instructor</th>
+                                <th>Time</th>
+                                <th>Room</th>									
+							</tr></thead>
+					
+						<tbody>
+                        <tr>
+							<td>Curabitur blandit tempus porttitor </td>
+							<td>Mark Twain</td>
+                            <td>10.30 AM</td>
+                            <td>004</td>
+						</tr>
+                        <tr>
+							<td>Pellentesque ornare sem</td>
+							<td>Janet Hope</td>
+                            <td>10.30 AM</td>
+                            <td>014</td>
+						</tr>
+                        <tr>
+							<td>Integer posuere erat a ante venenatis</td>
+							<td>Tom Cruise</td>
+                            <td>12.30 AM</td>
+                            <td>094</td>
+						</tr>
+                        <tr>
+							<td>Sed posuere consectetur</td>
+							<td>Bob Sinclair</td>
+                            <td>11.30 AM</td>
+                            <td>054</td>
+						</tr>
+                      
+					</tbody></table>
         <div style="text-align:center">
         	<a href="all-courses.html" title="Courses" class="btn btn-primary btn-lg">view all courses</a>
         </div>

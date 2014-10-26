@@ -1,87 +1,1891 @@
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+/* line 10, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker {
+  padding: 4px;
+  border-radius: 4px;
+  direction: ltr;
+  /*.dow {
+		border-top: 1px solid #ddd !important;
+	}*/
+}
+/* line 18, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-inline {
+  width: 220px;
+}
+/* line 21, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker.datepicker-rtl {
+  direction: rtl;
+}
+/* line 24, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker.datepicker-rtl table tr td span {
+  float: right;
+}
+/* line 27, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+}
+/* line 31, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+/* line 41, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-top: 0;
+  position: absolute;
+}
+/* line 50, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-left:before {
+  left: 6px;
+}
+/* line 53, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 7px;
+}
+/* line 56, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-right:before {
+  right: 6px;
+}
+/* line 59, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 7px;
+}
+/* line 62, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-top:before {
+  top: -7px;
+}
+/* line 65, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-top:after {
+  top: -6px;
+}
+/* line 68, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-bottom:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid #999;
+}
+/* line 73, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker-dropdown.datepicker-orient-bottom:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #fff;
+}
+/* line 78, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker > div {
+  display: none;
+}
+/* line 81, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker.days div.datepicker-days {
+  display: block;
+}
+/* line 84, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker.months div.datepicker-months {
+  display: block;
+}
+/* line 87, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker.years div.datepicker-years {
+  display: block;
+}
+/* line 90, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 99, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td,
+.datepicker table tr th {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+}
+/* line 107, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent;
+}
+/* line 111, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.day:hover,
+.datepicker table tr td.day.focused {
+  background: #eeeeee;
+  cursor: pointer;
+}
+/* line 116, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #999999;
+}
+/* line 120, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+/* line 126, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+  color: #000000;
+  background-color: #ffdb99;
+  border-color: #ffb733;
+}
+/* line 134, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today:hover:hover,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today.disabled:hover:hover,
+.datepicker table tr td.today:focus,
+.datepicker table tr td.today:hover:focus,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today.disabled:hover:focus,
+.datepicker table tr td.today:active,
+.datepicker table tr td.today:hover:active,
+.datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today.disabled:hover:active,
+.datepicker table tr td.today.active,
+.datepicker table tr td.today:hover.active,
+.datepicker table tr td.today.disabled.active,
+.datepicker table tr td.today.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.today,
+.open .dropdown-toggle.datepicker table tr td.today:hover,
+.open .dropdown-toggle.datepicker table tr td.today.disabled,
+.open .dropdown-toggle.datepicker table tr td.today.disabled:hover {
+  color: #000000;
+  background-color: #ffcd70;
+  border-color: #f59e00;
+}
+/* line 158, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.today:active,
+.datepicker table tr td.today:hover:active,
+.datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today.disabled:hover:active,
+.datepicker table tr td.today.active,
+.datepicker table tr td.today:hover.active,
+.datepicker table tr td.today.disabled.active,
+.datepicker table tr td.today.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.today,
+.open .dropdown-toggle.datepicker table tr td.today:hover,
+.open .dropdown-toggle.datepicker table tr td.today.disabled,
+.open .dropdown-toggle.datepicker table tr td.today.disabled:hover {
+  background-image: none;
+}
+/* line 172, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today:hover.disabled,
+.datepicker table tr td.today.disabled.disabled,
+.datepicker table tr td.today.disabled:hover.disabled,
+.datepicker table tr td.today[disabled],
+.datepicker table tr td.today:hover[disabled],
+.datepicker table tr td.today.disabled[disabled],
+.datepicker table tr td.today.disabled:hover[disabled],
+fieldset[disabled] .datepicker table tr td.today,
+fieldset[disabled] .datepicker table tr td.today:hover,
+fieldset[disabled] .datepicker table tr td.today.disabled,
+fieldset[disabled] .datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today:hover.disabled:hover,
+.datepicker table tr td.today.disabled.disabled:hover,
+.datepicker table tr td.today.disabled:hover.disabled:hover,
+.datepicker table tr td.today[disabled]:hover,
+.datepicker table tr td.today:hover[disabled]:hover,
+.datepicker table tr td.today.disabled[disabled]:hover,
+.datepicker table tr td.today.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.today:hover,
+fieldset[disabled] .datepicker table tr td.today:hover:hover,
+fieldset[disabled] .datepicker table tr td.today.disabled:hover,
+fieldset[disabled] .datepicker table tr td.today.disabled:hover:hover,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today:hover.disabled:focus,
+.datepicker table tr td.today.disabled.disabled:focus,
+.datepicker table tr td.today.disabled:hover.disabled:focus,
+.datepicker table tr td.today[disabled]:focus,
+.datepicker table tr td.today:hover[disabled]:focus,
+.datepicker table tr td.today.disabled[disabled]:focus,
+.datepicker table tr td.today.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.today:focus,
+fieldset[disabled] .datepicker table tr td.today:hover:focus,
+fieldset[disabled] .datepicker table tr td.today.disabled:focus,
+fieldset[disabled] .datepicker table tr td.today.disabled:hover:focus,
+.datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today:hover.disabled:active,
+.datepicker table tr td.today.disabled.disabled:active,
+.datepicker table tr td.today.disabled:hover.disabled:active,
+.datepicker table tr td.today[disabled]:active,
+.datepicker table tr td.today:hover[disabled]:active,
+.datepicker table tr td.today.disabled[disabled]:active,
+.datepicker table tr td.today.disabled:hover[disabled]:active,
+fieldset[disabled] .datepicker table tr td.today:active,
+fieldset[disabled] .datepicker table tr td.today:hover:active,
+fieldset[disabled] .datepicker table tr td.today.disabled:active,
+fieldset[disabled] .datepicker table tr td.today.disabled:hover:active,
+.datepicker table tr td.today.disabled.active,
+.datepicker table tr td.today:hover.disabled.active,
+.datepicker table tr td.today.disabled.disabled.active,
+.datepicker table tr td.today.disabled:hover.disabled.active,
+.datepicker table tr td.today[disabled].active,
+.datepicker table tr td.today:hover[disabled].active,
+.datepicker table tr td.today.disabled[disabled].active,
+.datepicker table tr td.today.disabled:hover[disabled].active,
+fieldset[disabled] .datepicker table tr td.today.active,
+fieldset[disabled] .datepicker table tr td.today:hover.active,
+fieldset[disabled] .datepicker table tr td.today.disabled.active,
+fieldset[disabled] .datepicker table tr td.today.disabled:hover.active {
+  background-color: #ffdb99;
+  border-color: #ffb733;
+}
+/* line 235, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.today:hover:hover {
+  color: #000;
+}
+/* line 238, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.today.active:hover {
+  color: #fff;
+}
+/* line 241, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.range,
+.datepicker table tr td.range:hover,
+.datepicker table tr td.range.disabled,
+.datepicker table tr td.range.disabled:hover {
+  background: #eeeeee;
+  border-radius: 0;
+}
+/* line 248, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.range.today,
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:hover {
+  color: #000000;
+  background-color: #f7ca77;
+  border-color: #f1a417;
+  border-radius: 0;
+}
+/* line 257, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today:hover:hover,
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today.disabled:hover:hover,
+.datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today:hover:focus,
+.datepicker table tr td.range.today.disabled:focus,
+.datepicker table tr td.range.today.disabled:hover:focus,
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today:hover:active,
+.datepicker table tr td.range.today.disabled:active,
+.datepicker table tr td.range.today.disabled:hover:active,
+.datepicker table tr td.range.today.active,
+.datepicker table tr td.range.today:hover.active,
+.datepicker table tr td.range.today.disabled.active,
+.datepicker table tr td.range.today.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.range.today,
+.open .dropdown-toggle.datepicker table tr td.range.today:hover,
+.open .dropdown-toggle.datepicker table tr td.range.today.disabled,
+.open .dropdown-toggle.datepicker table tr td.range.today.disabled:hover {
+  color: #000000;
+  background-color: #f4bb51;
+  border-color: #bf800c;
+}
+/* line 281, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today:hover:active,
+.datepicker table tr td.range.today.disabled:active,
+.datepicker table tr td.range.today.disabled:hover:active,
+.datepicker table tr td.range.today.active,
+.datepicker table tr td.range.today:hover.active,
+.datepicker table tr td.range.today.disabled.active,
+.datepicker table tr td.range.today.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.range.today,
+.open .dropdown-toggle.datepicker table tr td.range.today:hover,
+.open .dropdown-toggle.datepicker table tr td.range.today.disabled,
+.open .dropdown-toggle.datepicker table tr td.range.today.disabled:hover {
+  background-image: none;
+}
+/* line 295, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today:hover.disabled,
+.datepicker table tr td.range.today.disabled.disabled,
+.datepicker table tr td.range.today.disabled:hover.disabled,
+.datepicker table tr td.range.today[disabled],
+.datepicker table tr td.range.today:hover[disabled],
+.datepicker table tr td.range.today.disabled[disabled],
+.datepicker table tr td.range.today.disabled:hover[disabled],
+fieldset[disabled] .datepicker table tr td.range.today,
+fieldset[disabled] .datepicker table tr td.range.today:hover,
+fieldset[disabled] .datepicker table tr td.range.today.disabled,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today:hover.disabled:hover,
+.datepicker table tr td.range.today.disabled.disabled:hover,
+.datepicker table tr td.range.today.disabled:hover.disabled:hover,
+.datepicker table tr td.range.today[disabled]:hover,
+.datepicker table tr td.range.today:hover[disabled]:hover,
+.datepicker table tr td.range.today.disabled[disabled]:hover,
+.datepicker table tr td.range.today.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range.today:hover,
+fieldset[disabled] .datepicker table tr td.range.today:hover:hover,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:hover,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:hover:hover,
+.datepicker table tr td.range.today.disabled:focus,
+.datepicker table tr td.range.today:hover.disabled:focus,
+.datepicker table tr td.range.today.disabled.disabled:focus,
+.datepicker table tr td.range.today.disabled:hover.disabled:focus,
+.datepicker table tr td.range.today[disabled]:focus,
+.datepicker table tr td.range.today:hover[disabled]:focus,
+.datepicker table tr td.range.today.disabled[disabled]:focus,
+.datepicker table tr td.range.today.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range.today:focus,
+fieldset[disabled] .datepicker table tr td.range.today:hover:focus,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:focus,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:hover:focus,
+.datepicker table tr td.range.today.disabled:active,
+.datepicker table tr td.range.today:hover.disabled:active,
+.datepicker table tr td.range.today.disabled.disabled:active,
+.datepicker table tr td.range.today.disabled:hover.disabled:active,
+.datepicker table tr td.range.today[disabled]:active,
+.datepicker table tr td.range.today:hover[disabled]:active,
+.datepicker table tr td.range.today.disabled[disabled]:active,
+.datepicker table tr td.range.today.disabled:hover[disabled]:active,
+fieldset[disabled] .datepicker table tr td.range.today:active,
+fieldset[disabled] .datepicker table tr td.range.today:hover:active,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:active,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:hover:active,
+.datepicker table tr td.range.today.disabled.active,
+.datepicker table tr td.range.today:hover.disabled.active,
+.datepicker table tr td.range.today.disabled.disabled.active,
+.datepicker table tr td.range.today.disabled:hover.disabled.active,
+.datepicker table tr td.range.today[disabled].active,
+.datepicker table tr td.range.today:hover[disabled].active,
+.datepicker table tr td.range.today.disabled[disabled].active,
+.datepicker table tr td.range.today.disabled:hover[disabled].active,
+fieldset[disabled] .datepicker table tr td.range.today.active,
+fieldset[disabled] .datepicker table tr td.range.today:hover.active,
+fieldset[disabled] .datepicker table tr td.range.today.disabled.active,
+fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
+  background-color: #f7ca77;
+  border-color: #f1a417;
+}
+/* line 358, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.selected,
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.disabled,
+.datepicker table tr td.selected.disabled:hover {
+  color: #ffffff;
+  background-color: #999999;
+  border-color: #555555;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 367, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected:hover:hover,
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.disabled:hover:hover,
+.datepicker table tr td.selected:focus,
+.datepicker table tr td.selected:hover:focus,
+.datepicker table tr td.selected.disabled:focus,
+.datepicker table tr td.selected.disabled:hover:focus,
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected:hover:active,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected:hover.active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.selected,
+.open .dropdown-toggle.datepicker table tr td.selected:hover,
+.open .dropdown-toggle.datepicker table tr td.selected.disabled,
+.open .dropdown-toggle.datepicker table tr td.selected.disabled:hover {
+  color: #ffffff;
+  background-color: #858585;
+  border-color: #373737;
+}
+/* line 391, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected:hover:active,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected:hover.active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.selected,
+.open .dropdown-toggle.datepicker table tr td.selected:hover,
+.open .dropdown-toggle.datepicker table tr td.selected.disabled,
+.open .dropdown-toggle.datepicker table tr td.selected.disabled:hover {
+  background-image: none;
+}
+/* line 405, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.selected.disabled,
+.datepicker table tr td.selected:hover.disabled,
+.datepicker table tr td.selected.disabled.disabled,
+.datepicker table tr td.selected.disabled:hover.disabled,
+.datepicker table tr td.selected[disabled],
+.datepicker table tr td.selected:hover[disabled],
+.datepicker table tr td.selected.disabled[disabled],
+.datepicker table tr td.selected.disabled:hover[disabled],
+fieldset[disabled] .datepicker table tr td.selected,
+fieldset[disabled] .datepicker table tr td.selected:hover,
+fieldset[disabled] .datepicker table tr td.selected.disabled,
+fieldset[disabled] .datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected:hover.disabled:hover,
+.datepicker table tr td.selected.disabled.disabled:hover,
+.datepicker table tr td.selected.disabled:hover.disabled:hover,
+.datepicker table tr td.selected[disabled]:hover,
+.datepicker table tr td.selected:hover[disabled]:hover,
+.datepicker table tr td.selected.disabled[disabled]:hover,
+.datepicker table tr td.selected.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.selected:hover,
+fieldset[disabled] .datepicker table tr td.selected:hover:hover,
+fieldset[disabled] .datepicker table tr td.selected.disabled:hover,
+fieldset[disabled] .datepicker table tr td.selected.disabled:hover:hover,
+.datepicker table tr td.selected.disabled:focus,
+.datepicker table tr td.selected:hover.disabled:focus,
+.datepicker table tr td.selected.disabled.disabled:focus,
+.datepicker table tr td.selected.disabled:hover.disabled:focus,
+.datepicker table tr td.selected[disabled]:focus,
+.datepicker table tr td.selected:hover[disabled]:focus,
+.datepicker table tr td.selected.disabled[disabled]:focus,
+.datepicker table tr td.selected.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.selected:focus,
+fieldset[disabled] .datepicker table tr td.selected:hover:focus,
+fieldset[disabled] .datepicker table tr td.selected.disabled:focus,
+fieldset[disabled] .datepicker table tr td.selected.disabled:hover:focus,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected:hover.disabled:active,
+.datepicker table tr td.selected.disabled.disabled:active,
+.datepicker table tr td.selected.disabled:hover.disabled:active,
+.datepicker table tr td.selected[disabled]:active,
+.datepicker table tr td.selected:hover[disabled]:active,
+.datepicker table tr td.selected.disabled[disabled]:active,
+.datepicker table tr td.selected.disabled:hover[disabled]:active,
+fieldset[disabled] .datepicker table tr td.selected:active,
+fieldset[disabled] .datepicker table tr td.selected:hover:active,
+fieldset[disabled] .datepicker table tr td.selected.disabled:active,
+fieldset[disabled] .datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected:hover.disabled.active,
+.datepicker table tr td.selected.disabled.disabled.active,
+.datepicker table tr td.selected.disabled:hover.disabled.active,
+.datepicker table tr td.selected[disabled].active,
+.datepicker table tr td.selected:hover[disabled].active,
+.datepicker table tr td.selected.disabled[disabled].active,
+.datepicker table tr td.selected.disabled:hover[disabled].active,
+fieldset[disabled] .datepicker table tr td.selected.active,
+fieldset[disabled] .datepicker table tr td.selected:hover.active,
+fieldset[disabled] .datepicker table tr td.selected.disabled.active,
+fieldset[disabled] .datepicker table tr td.selected.disabled:hover.active {
+  background-color: #999999;
+  border-color: #555555;
+}
+/* line 468, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 477, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active:focus,
+.datepicker table tr td.active:hover:focus,
+.datepicker table tr td.active.disabled:focus,
+.datepicker table tr td.active.disabled:hover:focus,
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.active,
+.open .dropdown-toggle.datepicker table tr td.active:hover,
+.open .dropdown-toggle.datepicker table tr td.active.disabled,
+.open .dropdown-toggle.datepicker table tr td.active.disabled:hover {
+  color: #ffffff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+/* line 501, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td.active,
+.open .dropdown-toggle.datepicker table tr td.active:hover,
+.open .dropdown-toggle.datepicker table tr td.active.disabled,
+.open .dropdown-toggle.datepicker table tr td.active.disabled:hover {
+  background-image: none;
+}
+/* line 515, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active[disabled],
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active.disabled:hover[disabled],
+fieldset[disabled] .datepicker table tr td.active,
+fieldset[disabled] .datepicker table tr td.active:hover,
+fieldset[disabled] .datepicker table tr td.active.disabled,
+fieldset[disabled] .datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active:hover.disabled:hover,
+.datepicker table tr td.active.disabled.disabled:hover,
+.datepicker table tr td.active.disabled:hover.disabled:hover,
+.datepicker table tr td.active[disabled]:hover,
+.datepicker table tr td.active:hover[disabled]:hover,
+.datepicker table tr td.active.disabled[disabled]:hover,
+.datepicker table tr td.active.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.active:hover,
+fieldset[disabled] .datepicker table tr td.active:hover:hover,
+fieldset[disabled] .datepicker table tr td.active.disabled:hover,
+fieldset[disabled] .datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active.disabled:focus,
+.datepicker table tr td.active:hover.disabled:focus,
+.datepicker table tr td.active.disabled.disabled:focus,
+.datepicker table tr td.active.disabled:hover.disabled:focus,
+.datepicker table tr td.active[disabled]:focus,
+.datepicker table tr td.active:hover[disabled]:focus,
+.datepicker table tr td.active.disabled[disabled]:focus,
+.datepicker table tr td.active.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.active:focus,
+fieldset[disabled] .datepicker table tr td.active:hover:focus,
+fieldset[disabled] .datepicker table tr td.active.disabled:focus,
+fieldset[disabled] .datepicker table tr td.active.disabled:hover:focus,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active:hover.disabled:active,
+.datepicker table tr td.active.disabled.disabled:active,
+.datepicker table tr td.active.disabled:hover.disabled:active,
+.datepicker table tr td.active[disabled]:active,
+.datepicker table tr td.active:hover[disabled]:active,
+.datepicker table tr td.active.disabled[disabled]:active,
+.datepicker table tr td.active.disabled:hover[disabled]:active,
+fieldset[disabled] .datepicker table tr td.active:active,
+fieldset[disabled] .datepicker table tr td.active:hover:active,
+fieldset[disabled] .datepicker table tr td.active.disabled:active,
+fieldset[disabled] .datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active:hover.disabled.active,
+.datepicker table tr td.active.disabled.disabled.active,
+.datepicker table tr td.active.disabled:hover.disabled.active,
+.datepicker table tr td.active[disabled].active,
+.datepicker table tr td.active:hover[disabled].active,
+.datepicker table tr td.active.disabled[disabled].active,
+.datepicker table tr td.active.disabled:hover[disabled].active,
+fieldset[disabled] .datepicker table tr td.active.active,
+fieldset[disabled] .datepicker table tr td.active:hover.active,
+fieldset[disabled] .datepicker table tr td.active.disabled.active,
+fieldset[disabled] .datepicker table tr td.active.disabled:hover.active {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+/* line 578, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* line 588, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span:hover {
+  background: #eeeeee;
+}
+/* line 591, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+/* line 597, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 606, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active:focus,
+.datepicker table tr td span.active:hover:focus,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td span.active,
+.open .dropdown-toggle.datepicker table tr td span.active:hover,
+.open .dropdown-toggle.datepicker table tr td span.active.disabled,
+.open .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
+  color: #ffffff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+/* line 630, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td span.active,
+.open .dropdown-toggle.datepicker table tr td span.active:hover,
+.open .dropdown-toggle.datepicker table tr td span.active.disabled,
+.open .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
+  background-image: none;
+}
+/* line 644, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active:hover.disabled,
+.datepicker table tr td span.active.disabled.disabled,
+.datepicker table tr td span.active.disabled:hover.disabled,
+.datepicker table tr td span.active[disabled],
+.datepicker table tr td span.active:hover[disabled],
+.datepicker table tr td span.active.disabled[disabled],
+.datepicker table tr td span.active.disabled:hover[disabled],
+fieldset[disabled] .datepicker table tr td span.active,
+fieldset[disabled] .datepicker table tr td span.active:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active:hover.disabled:hover,
+.datepicker table tr td span.active.disabled.disabled:hover,
+.datepicker table tr td span.active.disabled:hover.disabled:hover,
+.datepicker table tr td span.active[disabled]:hover,
+.datepicker table tr td span.active:hover[disabled]:hover,
+.datepicker table tr td span.active.disabled[disabled]:hover,
+.datepicker table tr td span.active.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active:hover.disabled:focus,
+.datepicker table tr td span.active.disabled.disabled:focus,
+.datepicker table tr td span.active.disabled:hover.disabled:focus,
+.datepicker table tr td span.active[disabled]:focus,
+.datepicker table tr td span.active:hover[disabled]:focus,
+.datepicker table tr td span.active.disabled[disabled]:focus,
+.datepicker table tr td span.active.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td span.active:focus,
+fieldset[disabled] .datepicker table tr td span.active:hover:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active:hover.disabled:active,
+.datepicker table tr td span.active.disabled.disabled:active,
+.datepicker table tr td span.active.disabled:hover.disabled:active,
+.datepicker table tr td span.active[disabled]:active,
+.datepicker table tr td span.active:hover[disabled]:active,
+.datepicker table tr td span.active.disabled[disabled]:active,
+.datepicker table tr td span.active.disabled:hover[disabled]:active,
+fieldset[disabled] .datepicker table tr td span.active:active,
+fieldset[disabled] .datepicker table tr td span.active:hover:active,
+fieldset[disabled] .datepicker table tr td span.active.disabled:active,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active:hover.disabled.active,
+.datepicker table tr td span.active.disabled.disabled.active,
+.datepicker table tr td span.active.disabled:hover.disabled.active,
+.datepicker table tr td span.active[disabled].active,
+.datepicker table tr td span.active:hover[disabled].active,
+.datepicker table tr td span.active.disabled[disabled].active,
+.datepicker table tr td span.active.disabled:hover[disabled].active,
+fieldset[disabled] .datepicker table tr td span.active.active,
+fieldset[disabled] .datepicker table tr td span.active:hover.active,
+fieldset[disabled] .datepicker table tr td span.active.disabled.active,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+/* line 707, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker table tr td span.old,
+.datepicker table tr td span.new {
+  color: #999999;
+}
+/* line 711, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker th.datepicker-switch {
+  width: 145px;
+}
+/* line 714, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker thead tr:first-child th,
+.datepicker tfoot tr th {
+  cursor: pointer;
+}
+/* line 718, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker thead tr:first-child th:hover,
+.datepicker tfoot tr th:hover {
+  background: #eeeeee;
+}
+/* line 722, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle;
+}
+/* line 728, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker thead tr:first-child th.cw {
+  cursor: default;
+  background-color: transparent;
+}
+/* line 732, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.input-group.date .input-group-addon i {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+/* line 737, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.input-daterange input {
+  text-align: center;
+}
+/* line 740, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.input-daterange input:first-child {
+  border-radius: 3px 0 0 3px;
+}
+/* line 743, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.input-daterange input:last-child {
+  border-radius: 0 3px 3px 0;
+}
+/* line 746, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.input-daterange .input-group-addon {
+  width: auto;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  border: solid #cccccc;
+  border-width: 1px 0;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+/* line 761, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.428571429;
+}
+/* line 787, /Users/EggDouglas/workshop/workshop/public/css/datepicker.less */
+.datepicker.dropdown-menu th,
+.datepicker.datepicker-inline th,
+.datepicker.dropdown-menu td,
+.datepicker.datepicker-inline td {
+  padding: 0px 5px;
+}
+/*!
+ * FullCalendar v2.1.1 Stylesheet
+ * Docs & License: http://arshaw.com/fullcalendar/
+ * (c) 2013 Adam Shaw
+ */
+/* line 8, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+/* line 13, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-rtl {
+  text-align: right;
+}
+/* line 17, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+body .fc {
+  /* extra precedence to overcome jqui */
+  font-size: 1em;
+}
+/* Colors
+--------------------------------------------------------------------------------------------------*/
+/* line 25, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed hr,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+  border-color: #ddd;
+}
+/* line 35, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-unthemed .fc-popover {
+  background-color: #fff;
+}
+/* line 39, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-unthemed hr,
+.fc-unthemed .fc-popover .fc-header {
+  background: #eee;
+}
+/* line 44, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-unthemed .fc-popover .fc-header .fc-close {
+  color: #666;
+}
+/* line 48, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-unthemed .fc-today {
+  background: #fcf8e3;
+}
+/* line 52, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-highlight {
+  /* when user is selecting cells */
+  background: #bce8f1;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  /* for IE */
+}
+/* Icons (inline elements with styled text that mock arrow icons)
+--------------------------------------------------------------------------------------------------*/
+/* line 62, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-icon {
+  display: inline-block;
+  font-size: 2em;
+  line-height: .5em;
+  height: .5em;
+  /* will make the total height 1em */
+  font-family: "Courier New", Courier, monospace;
+}
+/* line 70, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-icon-left-single-arrow:after {
+  content: "\02039";
+  font-weight: bold;
+}
+/* line 75, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-icon-right-single-arrow:after {
+  content: "\0203A";
+  font-weight: bold;
+}
+/* line 80, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-icon-left-double-arrow:after {
+  content: "\000AB";
+}
+/* line 84, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-icon-right-double-arrow:after {
+  content: "\000BB";
+}
+/* line 88, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-icon-x:after {
+  content: "\000D7";
+}
+/* Buttons (styled <button> tags, normalized to work cross-browser)
+--------------------------------------------------------------------------------------------------*/
+/* line 96, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc button {
+  /* force height to include the border and padding */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* dimensions */
+  margin: 0;
+  height: 2.1em;
+  padding: 0 .6em;
+  /* text & cursor */
+  font-size: 1em;
+  /* normalize */
+  white-space: nowrap;
+  cursor: pointer;
+}
+/* Firefox has an annoying inner border */
+/* line 114, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc button::-moz-focus-inner {
+  margin: 0;
+  padding: 0;
+}
+/* line 116, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-default {
+  /* non-theme */
+  border: 1px solid;
+}
+/* line 120, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-default.fc-corner-left {
+  /* non-theme */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* line 125, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-default.fc-corner-right {
+  /* non-theme */
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* icons in buttons */
+/* line 132, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc button .fc-icon {
+  /* non-theme */
+  position: relative;
+  top: .05em;
+  /* seems to be a good adjustment across browsers */
+  margin: 0 .1em;
+}
+/*
+  button states
+  borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
+*/
+/* line 143, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-default {
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 158, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-hover,
+.fc-state-down,
+.fc-state-active,
+.fc-state-disabled {
+  color: #333333;
+  background-color: #e6e6e6;
+}
+/* line 166, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-hover {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+/* line 176, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-down,
+.fc-state-active {
+  background-color: #cccccc;
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 183, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-state-disabled {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+/* Buttons Groups
+--------------------------------------------------------------------------------------------------*/
+/* line 195, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-button-group {
+  display: inline-block;
+}
+/*
+every button that is not first in a button group should scootch over one pixel and cover the
+previous button's border...
+*/
+/* line 204, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc .fc-button-group > * {
+  /* extra precedence b/c buttons have margin set to zero */
+  float: left;
+  margin: 0 0 0 -1px;
+}
+/* line 209, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc .fc-button-group > :first-child {
+  /* same */
+  margin-left: 0;
+}
+/* Popover
+--------------------------------------------------------------------------------------------------*/
+/* line 217, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-popover {
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+/* line 222, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-popover .fc-header {
+  padding: 2px 4px;
+}
+/* line 226, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-popover .fc-header .fc-title {
+  margin: 0 2px;
+}
+/* line 230, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-popover .fc-header .fc-close {
+  cursor: pointer;
+}
+/* line 234, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-ltr .fc-popover .fc-header .fc-title,
+.fc-rtl .fc-popover .fc-header .fc-close {
+  float: left;
+}
+/* line 239, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-rtl .fc-popover .fc-header .fc-title,
+.fc-ltr .fc-popover .fc-header .fc-close {
+  float: right;
+}
+/* unthemed */
+/* line 246, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-unthemed .fc-popover {
+  border-width: 1px;
+  border-style: solid;
+}
+/* line 251, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-unthemed .fc-popover .fc-header .fc-close {
+  font-size: 25px;
+  margin-top: 4px;
+}
+/* jqui themed */
+/* line 258, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-popover > .ui-widget-header + .ui-widget-content {
+  border-top: 0;
+  /* where they meet, let the header have the border */
+}
+/* Misc Reusable Components
+--------------------------------------------------------------------------------------------------*/
+/* line 266, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc hr {
+  height: 0;
+  margin: 0;
+  padding: 0 0 2px;
+  /* height is unreliable across browsers, so use padding */
+  border-style: solid;
+  border-width: 1px 0;
+}
+/* line 274, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-clear {
+  clear: both;
+}
+/* line 278, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-bg,
+.fc-highlight-skeleton,
+.fc-helper-skeleton {
+  /* these element should always cling to top-left/right corners */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* line 288, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-bg {
+  bottom: 0;
+  /* strech bg to bottom edge */
+}
+/* line 292, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-bg table {
+  height: 100%;
+  /* strech bg to bottom edge */
+}
+/* Tables
+--------------------------------------------------------------------------------------------------*/
+/* line 300, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  /* normalize cross-browser */
+}
+/* line 308, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc th {
+  text-align: center;
+}
+/* line 312, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc th,
+.fc td {
+  border-style: solid;
+  border-width: 1px;
+  padding: 0;
+  vertical-align: top;
+}
+/* line 320, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc td.fc-today {
+  border-style: double;
+  /* overcome neighboring borders */
+}
+/* Fake Table Rows
+--------------------------------------------------------------------------------------------------*/
+/* line 328, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc .fc-row {
+  /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
+  /* no visible border by default. but make available if need be (scrollbar width compensation) */
+  border-style: solid;
+  border-width: 0;
+}
+/* line 334, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row table {
+  /* don't put left/right border on anything within a fake row.
+	   the outer tbody will worry about this */
+  border-left: 0 hidden transparent;
+  border-right: 0 hidden transparent;
+  /* no bottom borders on rows */
+  border-bottom: 0 hidden transparent;
+}
+/* line 344, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row:first-child table {
+  border-top: 0 hidden transparent;
+  /* no top border on first row */
+}
+/* Day Row (used within the header and the DayGrid)
+--------------------------------------------------------------------------------------------------*/
+/* line 352, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row {
+  position: relative;
+}
+/* line 356, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-bg {
+  z-index: 1;
+}
+/* highlighting cells */
+/* line 362, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-highlight-skeleton {
+  z-index: 2;
+  bottom: 0;
+  /* stretch skeleton to bottom of row */
+}
+/* line 367, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-highlight-skeleton table {
+  height: 100%;
+  /* stretch skeleton to bottom of row */
+}
+/* line 371, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-highlight-skeleton td {
+  border-color: transparent;
+}
+/*
+row content (which contains day/week numbers and events) as well as "helper" (which contains
+temporary rendered events).
+*/
+/* line 380, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-content-skeleton {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 2px;
+  /* matches the space above the events */
+}
+/* line 386, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-helper-skeleton {
+  z-index: 4;
+}
+/* line 390, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+  /* see-through to the background below */
+  background: none;
+  /* in case <td>s are globally styled */
+  border-color: transparent;
+  /* don't put a border between events and/or the day number */
+  border-bottom: 0;
+}
+/* line 400, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row .fc-content-skeleton tbody td,
+.fc-row .fc-helper-skeleton tbody td {
+  /* don't put a border between event cells */
+  border-top: 0;
+}
+/* Scrolling Container
+--------------------------------------------------------------------------------------------------*/
+/* line 410, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-scroller {
+  /* this class goes on elements for guaranteed vertical scrollbars */
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 415, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-scroller > * {
+  /* we expect an immediate inner element */
+  position: relative;
+  /* re-scope all positions */
+  width: 100%;
+  /* hack to force re-sizing this inner element when scrollbars appear/disappear */
+  overflow: hidden;
+  /* don't let negative margins or absolute positioning create further scroll */
+}
+/* Global Event Styles
+--------------------------------------------------------------------------------------------------*/
+/* line 425, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-event {
+  position: relative;
+  /* for resize handle and other inner positioning */
+  display: block;
+  /* make the <a> tag block */
+  font-size: .85em;
+  line-height: 1.3;
+  border-radius: 3px;
+  border: 1px solid #3a87ad;
+  /* default BORDER color */
+  background-color: #3a87ad;
+  /* default BACKGROUND color */
+  font-weight: normal;
+  /* undo jqui's ui-widget-header bold */
+}
+/* overpower some of bootstrap's and jqui's styles on <a> tags */
+/* line 437, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-event,
+.fc-event:hover,
+.ui-widget .fc-event {
+  color: #fff;
+  /* default TEXT color */
+  text-decoration: none;
+  /* if <a> has an href */
+}
+/* line 444, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-event[href],
+.fc-event.fc-draggable {
+  cursor: pointer;
+  /* give events with links and draggable events a hand mouse pointer */
+}
+/* DayGrid events
+----------------------------------------------------------------------------------------------------
+We use the full "fc-day-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+/* line 456, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-day-grid-event {
+  margin: 1px 2px 0;
+  /* spacing between events and edges */
+  padding: 0 1px;
+}
+/* events that are continuing to/from another week. kill rounded corners and butt up against edge */
+/* line 463, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-ltr .fc-day-grid-event.fc-not-start,
+.fc-rtl .fc-day-grid-event.fc-not-end {
+  margin-left: 0;
+  border-left-width: 0;
+  padding-left: 1px;
+  /* replace the border with padding */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* line 472, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-ltr .fc-day-grid-event.fc-not-end,
+.fc-rtl .fc-day-grid-event.fc-not-start {
+  margin-right: 0;
+  border-right-width: 0;
+  padding-right: 1px;
+  /* replace the border with padding */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 481, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-day-grid-event > .fc-content {
+  /* force events to be one-line tall */
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 486, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-day-grid-event .fc-time {
+  font-weight: bold;
+}
+/* resize handle (outside of fc-content, so can go outside of bounds) */
+/* line 492, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-day-grid-event .fc-resizer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+}
+/* line 499, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-ltr .fc-day-grid-event .fc-resizer {
+  right: -3px;
+  cursor: e-resize;
+}
+/* line 504, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-rtl .fc-day-grid-event .fc-resizer {
+  left: -3px;
+  cursor: w-resize;
+}
+/* Event Limiting
+--------------------------------------------------------------------------------------------------*/
+/* "more" link that represents hidden events */
+/* line 515, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+a.fc-more {
+  margin: 1px 3px;
+  font-size: .85em;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 522, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+a.fc-more:hover {
+  text-decoration: underline;
+}
+/* line 526, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-limited {
+  /* rows and cells that are hidden because of a "more" link */
+  display: none;
+}
+/* popover that appears when "more" link is clicked */
+/* line 532, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-day-grid .fc-row {
+  z-index: 1;
+  /* make the "more" popover one higher than this */
+}
+/* line 536, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-more-popover {
+  z-index: 2;
+  width: 220px;
+}
+/* line 541, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-more-popover .fc-event-container {
+  padding: 10px;
+}
+/* Toolbar
+--------------------------------------------------------------------------------------------------*/
+/* line 548, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar {
+  text-align: center;
+  margin-bottom: 1em;
+}
+/* line 553, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar .fc-left {
+  float: left;
+}
+/* line 557, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar .fc-right {
+  float: right;
+}
+/* line 561, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar .fc-center {
+  display: inline-block;
+}
+/* the things within each left/right/center section */
+/* line 566, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc .fc-toolbar > * > * {
+  /* extra precedence to override button border margins */
+  float: left;
+  margin-left: .75em;
+}
+/* the first thing within each left/center/right section */
+/* line 572, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc .fc-toolbar > * > :first-child {
+  /* extra precedence to override button border margins */
+  margin-left: 0;
+}
+/* title text */
+/* line 578, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar h2 {
+  margin: 0;
+}
+/* button layering (for border precedence) */
+/* line 584, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar button {
+  position: relative;
+}
+/* line 588, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar .fc-state-hover,
+.fc-toolbar .ui-state-hover {
+  z-index: 2;
+}
+/* line 593, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar .fc-state-down {
+  z-index: 3;
+}
+/* line 597, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar .fc-state-active,
+.fc-toolbar .ui-state-active {
+  z-index: 4;
+}
+/* line 602, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-toolbar button:focus {
+  z-index: 5;
+}
+/* View Structure
+--------------------------------------------------------------------------------------------------*/
+/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */
+/* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
+/* line 612, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-view-container *,
+.fc-view-container *:before,
+.fc-view-container *:after {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 620, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-view,
+.fc-view > table {
+  /* so dragged elements can be above the view's main element */
+  position: relative;
+  z-index: 1;
+}
+/* BasicView
+--------------------------------------------------------------------------------------------------*/
+/* day row structure */
+/* line 631, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-basicWeek-view .fc-content-skeleton,
+.fc-basicDay-view .fc-content-skeleton {
+  /* we are sure there are no day numbers in these views, so... */
+  padding-top: 1px;
+  /* add a pixel to make sure there are 2px padding above events */
+  padding-bottom: 1em;
+  /* ensure a space at bottom of cell for user selecting/clicking */
+}
+/* line 638, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-basic-view tbody .fc-row {
+  min-height: 4em;
+  /* ensure that all rows are at least this tall */
+}
+/* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
+/* line 644, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row.fc-rigid {
+  overflow: hidden;
+}
+/* line 648, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-row.fc-rigid .fc-content-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* week and day number styling */
+/* line 657, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-basic-view .fc-week-number,
+.fc-basic-view .fc-day-number {
+  padding: 0 2px;
+}
+/* line 662, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-basic-view td.fc-week-number span,
+.fc-basic-view td.fc-day-number {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 668, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-basic-view .fc-week-number {
+  text-align: center;
+}
+/* line 672, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-basic-view .fc-week-number span {
+  /* work around the way we do column resizing and ensure a minimum width */
+  display: inline-block;
+  min-width: 1.25em;
+}
+/* line 678, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-ltr .fc-basic-view .fc-day-number {
+  text-align: right;
+}
+/* line 682, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-rtl .fc-basic-view .fc-day-number {
+  text-align: left;
+}
+/* line 686, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-day-number.fc-other-month {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* for IE */
+  /* opacity with small font can sometimes look too faded
+	   might want to set the 'color' property instead
+	   making day-numbers bold also fixes the problem */
+}
+/* AgendaView all-day area
+--------------------------------------------------------------------------------------------------*/
+/* line 697, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-agenda-view .fc-day-grid {
+  position: relative;
+  z-index: 2;
+  /* so the "more.." popover will be over the time grid */
+}
+/* line 702, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-agenda-view .fc-day-grid .fc-row {
+  min-height: 3em;
+  /* all-day section will never get shorter than this */
+}
+/* line 706, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
+  padding-top: 1px;
+  /* add a pixel to make sure there are 2px padding above events */
+  padding-bottom: 1em;
+  /* give space underneath events for clicking/selecting days */
+}
+/* TimeGrid axis running down the side (for both the all-day area and the slot area)
+--------------------------------------------------------------------------------------------------*/
+/* line 715, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc .fc-axis {
+  /* .fc to overcome default cell styles */
+  vertical-align: middle;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+/* line 721, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-ltr .fc-axis {
+  text-align: right;
+}
+/* line 725, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-rtl .fc-axis {
+  text-align: left;
+}
+/* line 729, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.ui-widget td.fc-axis {
+  font-weight: normal;
+  /* overcome jqui theme making it bold */
+}
+/* TimeGrid Structure
+--------------------------------------------------------------------------------------------------*/
+/* line 737, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-container,
+.fc-time-grid {
+  /* so slats/bg/content/etc positions get scoped within here */
+  position: relative;
+  z-index: 1;
+}
+/* line 743, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid {
+  min-height: 100%;
+  /* so if height setting is 'auto', .fc-bg stretches to fill height */
+}
+/* line 747, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid table {
+  /* don't put outer borders on slats/bg/content/etc */
+  border: 0 hidden transparent;
+}
+/* line 751, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid > .fc-bg {
+  z-index: 1;
+}
+/* line 755, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid .fc-slats,
+.fc-time-grid > hr {
+  /* the <hr> AgendaView injects when grid is shorter than scroller */
+  position: relative;
+  z-index: 2;
+}
+/* line 761, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid .fc-highlight-skeleton {
+  z-index: 3;
+}
+/* line 765, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid .fc-content-skeleton {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* line 773, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid > .fc-helper-skeleton {
+  z-index: 5;
+}
+/* TimeGrid Slats (lines that run horizontally)
+--------------------------------------------------------------------------------------------------*/
+/* line 781, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-slats td {
+  height: 1.5em;
+  border-bottom: 0;
+  /* each cell is responsible for its top border */
+}
+/* line 786, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-slats .fc-minor td {
+  border-top-style: dotted;
+}
+/* line 790, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-slats .ui-widget-content {
+  /* for jqui theme */
+  background: none;
+  /* see through to fc-bg */
+}
+/* TimeGrid Highlighting Slots
+--------------------------------------------------------------------------------------------------*/
+/* line 798, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid .fc-highlight-container {
+  /* a div within a cell within the fc-highlight-skeleton */
+  position: relative;
+  /* scopes the left/right of the fc-highlight to be in the column */
+}
+/* line 802, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid .fc-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top and bottom will be in by JS */
+}
+/* TimeGrid Event Containment
+--------------------------------------------------------------------------------------------------*/
+/* line 813, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid .fc-event-container {
+  /* a div within a cell within the fc-content-skeleton */
+  position: relative;
+}
+/* line 817, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-ltr .fc-time-grid .fc-event-container {
+  /* space on the sides of events for LTR (default) */
+  margin: 0 2.5% 0 2px;
+}
+/* line 821, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-rtl .fc-time-grid .fc-event-container {
+  /* space on the sides of events for RTL */
+  margin: 0 2px 0 2.5%;
+}
+/* line 825, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid .fc-event {
+  position: absolute;
+  z-index: 1;
+  /* scope inner z-index's */
+}
+/* TimeGrid Event Styling
+----------------------------------------------------------------------------------------------------
+We use the full "fc-time-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+/* line 837, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-not-start {
+  /* events that are continuing from another day */
+  /* replace space made by the top border with padding */
+  border-top-width: 0;
+  padding-top: 1px;
+  /* remove top rounded corners */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/* line 847, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-not-end {
+  /* replace space made by the top border with padding */
+  border-bottom-width: 0;
+  padding-bottom: 1px;
+  /* remove bottom rounded corners */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 857, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event {
+  overflow: hidden;
+  /* don't let the bg flow over rounded corners */
+}
+/* line 861, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event > .fc-content {
+  /* contains the time and title, but no bg and resizer */
+  position: relative;
+  z-index: 2;
+  /* above the bg */
+}
+/* line 866, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event .fc-time,
+.fc-time-grid-event .fc-title {
+  padding: 0 1px;
+}
+/* line 871, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event .fc-time {
+  font-size: .85em;
+  white-space: nowrap;
+}
+/* line 876, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event .fc-bg {
+  z-index: 1;
+  background: #fff;
+  opacity: .25;
+  filter: alpha(opacity=25);
+  /* for IE */
+}
+/* short mode, where time and title are on the same line */
+/* line 885, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-short .fc-content {
+  /* don't wrap to second line (now that contents will be inline) */
+  white-space: nowrap;
+}
+/* line 890, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-short .fc-time,
+.fc-time-grid-event.fc-short .fc-title {
+  /* put the time and title on the same line */
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 897, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-short .fc-time span {
+  display: none;
+  /* don't display the full time text... */
+}
+/* line 901, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-short .fc-time:before {
+  content: attr(data-start);
+  /* ...instead, display only the start time */
+}
+/* line 905, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-short .fc-time:after {
+  content: "\000A0-\000A0";
+  /* seperate with a dash, wrapped in nbsp's */
+}
+/* line 909, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event.fc-short .fc-title {
+  font-size: .85em;
+  /* make the title text the same size as the time */
+  padding: 0;
+  /* undo padding from above */
+}
+/* resizer */
+/* line 916, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event .fc-resizer {
+  position: absolute;
+  z-index: 3;
+  /* above content */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  overflow: hidden;
+  line-height: 8px;
+  font-size: 11px;
+  font-family: monospace;
+  text-align: center;
+  cursor: s-resize;
+}
+/* line 931, /Users/EggDouglas/workshop/workshop/public/css/fullcalendar.less */
+.fc-time-grid-event .fc-resizer:after {
+  content: "=";
+}
 @media all and (min-width: 768px) {
-  /* line 6, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 7, /Users/EggDouglas/workshop/workshop/css/app */
   .carousel-inner > .item > img {
     min-height: 40vw;
   }
-  /* line 11, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 12, /Users/EggDouglas/workshop/workshop/css/app */
   #imgroup {
     position: relative;
     top: -20vw;
   }
-  /* line 15, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 16, /Users/EggDouglas/workshop/workshop/css/app */
   .slide-down-panle {
     width: 87vw;
   }
-  /* line 18, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 19, /Users/EggDouglas/workshop/workshop/css/app */
   #b {
     left: -86px;
   }
-  /* line 19, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 20, /Users/EggDouglas/workshop/workshop/css/app */
   #c {
     left: -246px;
   }
-  /* line 20, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 21, /Users/EggDouglas/workshop/workshop/css/app */
   #d {
     left: -315px;
   }
-  /* line 21, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 22, /Users/EggDouglas/workshop/workshop/css/app */
   #e {
     left: -553px;
   }
-  /* line 22, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 23, /Users/EggDouglas/workshop/workshop/css/app */
   .nav.navbar-nav {
     margin-left: 10px;
   }
-  /* line 27, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 28, /Users/EggDouglas/workshop/workshop/css/app */
   .col-md-5.col-sm-6 img {
     position: absolute;
     left: -10px;
   }
-  /* line 33, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 34, /Users/EggDouglas/workshop/workshop/css/app */
   .droppad {
     width: 100px;
   }
-  /* line 34, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 35, /Users/EggDouglas/workshop/workshop/css/app */
   .col-md-4 > .btn-default {
     width: 200px;
   }
-  /* line 39, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 40, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-3 {
     width: 31vw;
   }
-  /* line 41, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 42, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-3 .glyphicon {
     font-size: 30px;
   }
-  /* line 45, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 46, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-3 #down img {
     height: auto;
     width: 100%;
   }
-  /* line 51, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 52, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-9 {
     width: 62vw;
   }
 }
 @media all and (max-width: 767px) {
-  /* line 60, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 61, /Users/EggDouglas/workshop/workshop/css/app */
   .carousel-inner > .item > img {
     min-height: 60vw;
   }
-  /* line 65, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 66, /Users/EggDouglas/workshop/workshop/css/app */
   #imgroup {
     position: relative;
     top: -30vw;
   }
-  /* line 69, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 70, /Users/EggDouglas/workshop/workshop/css/app */
   .slide-down-panle {
     width: 100%;
   }
-  /* line 72, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 73, /Users/EggDouglas/workshop/workshop/css/app */
   .nav.navbar-nav {
     padding: 5px 5px 5px 5px;
   }
-  /* line 76, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 77, /Users/EggDouglas/workshop/workshop/css/app */
   .col-md-5.col-sm-6 img {
     margin: auto;
     top: 5;
@@ -89,56 +1893,56 @@
     right: 0;
     bottom: 5;
   }
-  /* line 84, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 85, /Users/EggDouglas/workshop/workshop/css/app */
   .navbar-collapse.in {
     overflow-y: visible;
   }
-  /* line 87, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 88, /Users/EggDouglas/workshop/workshop/css/app */
   .droppad {
     width: 95vw;
   }
-  /* line 88, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 89, /Users/EggDouglas/workshop/workshop/css/app */
   .col-md-4 > .btn-default {
     width: 100%;
   }
-  /* line 93, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 94, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-3 {
     width: 95vw;
   }
-  /* line 96, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 97, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-3 .glyphicon {
     font-size: 50px;
     padding: 5px 10px 40px 10px;
   }
-  /* line 101, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 102, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-3 #down img {
     height: auto;
     width: 95vw;
   }
-  /* line 107, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 108, /Users/EggDouglas/workshop/workshop/css/app */
   #main > .col-md-9 {
     width: 92vw;
     margin-left: 15px;
   }
-  /* line 112, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 113, /Users/EggDouglas/workshop/workshop/css/app */
   #main .showbox .col-md-9 {
     width: 80vw;
   }
 }
-/* line 119, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 120, /Users/EggDouglas/workshop/workshop/css/app */
 .row {
   margin-left: 0px;
   margin-right: 0px;
 }
-/* line 124, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 125, /Users/EggDouglas/workshop/workshop/css/app */
 body {
   background-image: url('http://www.ansonika.com/edu/img/pattern.jpg');
 }
-/* line 127, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 128, /Users/EggDouglas/workshop/workshop/css/app */
 a {
   color: #00a3d6;
 }
-/* line 130, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 131, /Users/EggDouglas/workshop/workshop/css/app */
 ul {
   padding-left: 0;
   list-style-type: none;
@@ -146,11 +1950,11 @@ ul {
   font-size: 12px;
   font-weight: 300;
 }
-/* line 136, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 137, /Users/EggDouglas/workshop/workshop/css/app */
 ul.courses {
   font-size: 15px;
 }
-/* line 142, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 143, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -164,33 +1968,33 @@ ul.courses {
   padding: 8px 50px 8px 50px;
   background-color: #2d343e;
 }
-/* line 155, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 156, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .head-block {
   width: 200px;
   margin: auto;
 }
-/* line 159, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 160, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-3 {
   padding-top: 5px;
   color: white;
   font-size: 12px;
   font-weight: 300;
 }
-/* line 165, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 166, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-3 img {
   float: right;
 }
-/* line 168, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 169, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-3 strong {
   color: #66cccc;
   font-size: 16px;
 }
-/* line 174, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 175, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 {
   padding-top: 8px;
   padding-left: 15px;
 }
-/* line 178, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 179, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 ul {
   max-width: 170px;
   width: auto;
@@ -201,15 +2005,15 @@ ul.courses {
   font-size: 12px;
   font-weight: 300;
 }
-/* line 187, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 188, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 ul li {
   display: inline;
 }
-/* line 190, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 191, /Users/EggDouglas/workshop/workshop/css/app */
 .top-head-container .col-md-4 ul li a {
   color: white;
 }
-/* line 199, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 200, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-collapse {
   background-color: #0099cc;
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
@@ -219,21 +2023,21 @@ ul.courses {
   position: absolute;
   z-index: 9999;
 }
-/* line 211, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 212, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-collapse .nav.navbar-nav {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/* line 215, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 216, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-collapse .navbar-nav > li > a {
   color: white;
   font-size: 12px;
 }
-/* line 219, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 220, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-collapse .navbar-nav > li > a:hover {
   background-color: #007399;
 }
-/* line 226, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 227, /Users/EggDouglas/workshop/workshop/css/app */
 .slide-down-panle {
   background-color: #2d343e;
   height: auto;
@@ -247,32 +2051,32 @@ ul.courses {
   position: absolute;
   z-index: 1000;
 }
-/* line 244, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 245, /Users/EggDouglas/workshop/workshop/css/app */
 .slide-down-panle .row p {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 300;
 }
-/* line 251, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 252, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-header {
   background-color: #0099cc;
 }
-/* line 253, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 254, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-header a {
   color: white;
 }
-/* line 256, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 257, /Users/EggDouglas/workshop/workshop/css/app */
 .navbar-header .icon-bar {
   background-color: white;
 }
-/* line 261, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 262, /Users/EggDouglas/workshop/workshop/css/app */
 .drop-down-panle {
   position: absolute;
   left: 0px;
   z-index: 1000;
   display: none;
 }
-/* line 267, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 268, /Users/EggDouglas/workshop/workshop/css/app */
 .drop-down-panle .droppad {
   text-align: center;
   padding-top: 0.2px;
@@ -284,24 +2088,24 @@ ul.courses {
   background-color: #3dd1ff;
   transition: background-color 2s, border-radius 2s;
 }
-/* line 277, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 278, /Users/EggDouglas/workshop/workshop/css/app */
 .drop-down-panle .droppad:hover {
   background-color: #ff6699;
   border-radius: 20px;
 }
-/* line 281, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 282, /Users/EggDouglas/workshop/workshop/css/app */
 .drop-down-panle .droppad a {
   text-decoration: none;
   color: white;
 }
-/* line 293, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 294, /Users/EggDouglas/workshop/workshop/css/app */
 hr {
   margin: 20px 0 20px 0;
   border: 0;
   border-top: 1px solid #25282d;
   border-bottom: 1px solid #414750;
 }
-/* line 298, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 299, /Users/EggDouglas/workshop/workshop/css/app */
 hr.lightcolor {
   border-bottom-color: #ffffff;
   border-bottom-style: solid;
@@ -323,11 +2127,11 @@ hr.lightcolor {
   color: #2e415c;
   display: block;
 }
-/* line 324, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 325, /Users/EggDouglas/workshop/workshop/css/app */
 .marginDiv {
   margin: 15px 5px 15px 5px;
 }
-/* line 329, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 330, /Users/EggDouglas/workshop/workshop/css/app */
 #card {
   margin-top: -45px;
   margin-bottom: 35px;
@@ -335,7 +2139,7 @@ hr.lightcolor {
   margin-right: auto;
   width: auto;
 }
-/* line 335, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 336, /Users/EggDouglas/workshop/workshop/css/app */
 #card .box {
   height: auto;
   width: auto;
@@ -346,48 +2150,48 @@ hr.lightcolor {
   box-shadow: 5px 5px 3px #888888;
   background-color: #00a3d6;
 }
-/* line 344, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 345, /Users/EggDouglas/workshop/workshop/css/app */
 #card .box a {
   text-decoration: none;
   width: 250px;
   color: white;
 }
-/* line 348, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 349, /Users/EggDouglas/workshop/workshop/css/app */
 #card .box a h3 {
   color: #ffff99;
 }
-/* line 352, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 353, /Users/EggDouglas/workshop/workshop/css/app */
 #card .box img {
   float: right;
 }
-/* line 356, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 357, /Users/EggDouglas/workshop/workshop/css/app */
 #card #green {
   transition: background-color 2s, border-color 2s;
 }
-/* line 359, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 360, /Users/EggDouglas/workshop/workshop/css/app */
 #card #green:hover {
   background-color: #47a347;
   border-color: #62bb62;
 }
-/* line 364, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 365, /Users/EggDouglas/workshop/workshop/css/app */
 #card #orange {
   transition: background-color 2s, border-color 2s;
 }
-/* line 367, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 368, /Users/EggDouglas/workshop/workshop/css/app */
 #card #orange:hover {
   background-color: #ff8330;
   border-color: #ffa263;
 }
-/* line 372, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 373, /Users/EggDouglas/workshop/workshop/css/app */
 #card #pink {
   transition: background-color 2s, border-color 2s;
 }
-/* line 375, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 376, /Users/EggDouglas/workshop/workshop/css/app */
 #card #pink:hover {
   background-color: #ff6699;
   border-color: #ff99bb;
 }
-/* line 383, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 384, /Users/EggDouglas/workshop/workshop/css/app */
 #bigLogo {
   width: 25vw;
   height: auto;
@@ -402,7 +2206,7 @@ hr.lightcolor {
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes logoin {
-  /* line 396, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 397, /Users/EggDouglas/workshop/workshop/css/app */
   0% {
     left: -100px;
     bottom: 100px;
@@ -410,7 +2214,7 @@ hr.lightcolor {
     opacity: 0;
     -webkit-transform: rotate3d(1, -1, 1, 230deg);
   }
-  /* line 397, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 398, /Users/EggDouglas/workshop/workshop/css/app */
   100% {
     left: 0;
     bottom: 10vw;
@@ -419,11 +2223,11 @@ hr.lightcolor {
     -webkit-transform: rotate3d(0, 0, 0, 0deg);
   }
 }
-/* line 402, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 403, /Users/EggDouglas/workshop/workshop/css/app */
 .carousel-caption {
   padding-bottom: 3vw;
 }
-/* line 405, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 406, /Users/EggDouglas/workshop/workshop/css/app */
 .carousel-caption #imgroup {
   position: relative;
   margin: auto;
@@ -431,7 +2235,7 @@ hr.lightcolor {
   left: 0;
   right: 0;
 }
-/* line 412, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 413, /Users/EggDouglas/workshop/workshop/css/app */
 .carousel-caption #services {
   height: auto;
   width: 50%;
@@ -444,7 +2248,7 @@ hr.lightcolor {
   animation: services 1s;
 }
 @-webkit-keyframes services {
-  /* line 423, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 424, /Users/EggDouglas/workshop/workshop/css/app */
   0% {
     left: -100px;
     top: -100px;
@@ -452,7 +2256,7 @@ hr.lightcolor {
     opacity: 0;
     transform: rotate(280deg);
   }
-  /* line 424, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 425, /Users/EggDouglas/workshop/workshop/css/app */
   100% {
     left: 25%;
     top: 0;
@@ -461,7 +2265,7 @@ hr.lightcolor {
     transform: rotate(0deg);
   }
 }
-/* line 426, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 427, /Users/EggDouglas/workshop/workshop/css/app */
 .carousel-caption #icon1 {
   height: auto;
   width: 25%;
@@ -474,21 +2278,21 @@ hr.lightcolor {
   animation: icon1 3s;
 }
 @-webkit-keyframes icon1 {
-  /* line 438, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 439, /Users/EggDouglas/workshop/workshop/css/app */
   0% {
     left: -500px;
     top: 500px;
     opacity: 0;
     -webkit-transform: rotate3d(1, -1, 1, 230deg);
   }
-  /* line 439, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 440, /Users/EggDouglas/workshop/workshop/css/app */
   100% {
     left: 6%;
     opacity: 1;
     -webkit-transform: rotate3d(0, 0, 0, 0deg);
   }
 }
-/* line 442, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 443, /Users/EggDouglas/workshop/workshop/css/app */
 .carousel-caption #icon2 {
   height: auto;
   width: 25%;
@@ -501,14 +2305,14 @@ hr.lightcolor {
   animation: icon2 5s;
 }
 @-webkit-keyframes icon2 {
-  /* line 454, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 455, /Users/EggDouglas/workshop/workshop/css/app */
   0% {
     left: 1300px;
     top: 1300px;
     opacity: 0;
     -webkit-transform: rotateX(360deg);
   }
-  /* line 455, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 456, /Users/EggDouglas/workshop/workshop/css/app */
   100% {
     left: 52%;
     top: 18vw;
@@ -516,7 +2320,7 @@ hr.lightcolor {
     -webkit-transform: rotateX(0deg);
   }
 }
-/* line 458, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 459, /Users/EggDouglas/workshop/workshop/css/app */
 .carousel-caption #icon3 {
   height: auto;
   width: 25%;
@@ -529,14 +2333,14 @@ hr.lightcolor {
   animation: icon3 7s;
 }
 @-webkit-keyframes icon3 {
-  /* line 470, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 471, /Users/EggDouglas/workshop/workshop/css/app */
   0% {
     left: -2800px;
     top: -2800px;
     opacity: 0;
     -webkit-transform: rotate3d(-1, -1, 1, 330deg);
   }
-  /* line 471, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 472, /Users/EggDouglas/workshop/workshop/css/app */
   100% {
     left: -25%;
     top: 18vw;
@@ -544,7 +2348,7 @@ hr.lightcolor {
     -webkit-transform: rotate3d(0, 0, 0, 0deg);
   }
 }
-/* line 474, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 475, /Users/EggDouglas/workshop/workshop/css/app */
 .carousel-caption #icon4 {
   height: auto;
   width: 25%;
@@ -557,14 +2361,14 @@ hr.lightcolor {
   animation: icon4 9s;
 }
 @-webkit-keyframes icon4 {
-  /* line 487, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 488, /Users/EggDouglas/workshop/workshop/css/app */
   0% {
     left: 4000px;
     top: -4000px;
     opacity: 0;
     -webkit-transform: rotateX(-230deg);
   }
-  /* line 488, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 489, /Users/EggDouglas/workshop/workshop/css/app */
   100% {
     left: 4%;
     top: -2vw;
@@ -572,7 +2376,7 @@ hr.lightcolor {
     -webkit-transform: rotateX(0deg);
   }
 }
-/* line 494, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 495, /Users/EggDouglas/workshop/workshop/css/app */
 .slidertext h1 {
   height: auto;
   position: absolute;
@@ -589,66 +2393,67 @@ hr.lightcolor {
   animation: h1 1.5s;
 }
 @-webkit-keyframes h1 {
-  /* line 509, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 510, /Users/EggDouglas/workshop/workshop/css/app */
   0% {
     right: 100px;
     top: -300px;
     opacity: 0.5;
   }
-  /* line 510, /Users/EggDouglas/workshop/workshop/css/app */
+  /* line 511, /Users/EggDouglas/workshop/workshop/css/app */
   100% {
     right: 0px;
     top: -200px;
     opacity: 1;
   }
 }
-/* line 513, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 514, /Users/EggDouglas/workshop/workshop/css/app */
 .slidertext p {
   position: absolute;
   right: 0px;
   top: -90px;
 }
-/* line 522, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 523, /Users/EggDouglas/workshop/workshop/css/app */
 .col-md-4 > .btn-default {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   height: 50px;
   text-align: left;
   color: white;
   background-color: #424952;
+  border: 3px solid #425962;
   border-radius: 5px;
-  border-color: #425962;
   transition: background-color 2s, border-color 2s;
 }
-/* line 532, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 534, /Users/EggDouglas/workshop/workshop/css/app */
 .col-md-4 > .btn-default:hover {
   background-color: #00a3d6;
   border-color: #00a3d6;
 }
-/* line 536, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 538, /Users/EggDouglas/workshop/workshop/css/app */
 .col-md-4 > .btn-default .glyphicon {
   float: right;
   font-size: 30px;
+  margin-top: -4px;
 }
-/* line 542, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 545, /Users/EggDouglas/workshop/workshop/css/app */
 #main {
   margin-top: 0px;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 547, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 550, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 {
   height: auto;
   color: #666666;
   margin-right: 3vw;
 }
-/* line 555, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 558, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 .row {
   padding: 20px;
   border: 3px solid #dcdcdc;
   border-radius: 5px;
   box-shadow: 5px 5px 3px #888888;
 }
-/* line 562, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 565, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up {
   color: #666666;
   height: auto;
@@ -659,17 +2464,17 @@ hr.lightcolor {
   background-repeat: no-repeat;
   background-position: top right;
 }
-/* line 571, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 574, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up .upbox {
   color: #666666;
 }
-/* line 573, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 576, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up .upbox .glyphicon {
   font-size: 30px;
   color: #ff6666;
   float: left;
 }
-/* line 582, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 585, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up-pages {
   padding: 30px 30px 30px 30px;
   height: auto;
@@ -678,39 +2483,39 @@ hr.lightcolor {
   background-color: #ffffff;
   color: #666666;
 }
-/* line 589, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 592, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up-pages .upbox {
   padding-left: 15px;
   color: #666666;
   font-weight: 300;
 }
-/* line 593, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 596, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up-pages .upbox .glyphicon {
   font-size: 30px;
   color: #ff6666;
   float: left;
 }
-/* line 601, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 604, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up-pages ul {
   font-weight: 400;
   font-size: 13px;
 }
-/* line 604, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 607, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up-pages ul li {
   margin: 3px;
 }
-/* line 607, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 610, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #up-pages ul .glyphicon {
   font-size: 12px;
   padding-right: 3px;
 }
-/* line 613, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 616, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-3 #down {
   padding: 0px;
   margin-bottom: 50px;
   overflow: hidden;
 }
-/* line 623, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 626, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 {
   height: auto;
   color: #666666;
@@ -720,11 +2525,11 @@ hr.lightcolor {
   border-radius: 5px;
   box-shadow: 5px 5px 3px #888888;
 }
-/* line 631, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 634, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 label {
   font-size: 12px;
 }
-/* line 634, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 637, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 .bigPiture {
   dispay: block;
   border: 2px solid #f0f0f0;
@@ -733,12 +2538,12 @@ hr.lightcolor {
   height: auto;
   overflow: hidden;
 }
-/* line 641, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 644, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 .bigPiture img {
   width: 100%;
   height: auto;
 }
-/* line 647, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 650, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 .pictureWithText {
   dispay: block;
   border: 2px solid #f0f0f0;
@@ -751,12 +2556,12 @@ hr.lightcolor {
   z-index: 500;
   overflow: hidden;
 }
-/* line 658, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 661, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 .pictureWithText img {
   width: 100%;
   height: auto;
 }
-/* line 663, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 666, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 .pictureWithText > p {
   width: 100%;
   background-color: black;
@@ -768,25 +2573,25 @@ hr.lightcolor {
   line-height: 24px;
   font-size: 2vw;
 }
-/* line 676, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 679, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 .takeplace {
   position: relative;
   width: 100%;
   height: auto;
   margin-bottom: 50px;
 }
-/* line 680, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 683, /Users/EggDouglas/workshop/workshop/css/app */
 #main > .col-md-9 .takeplace img {
   width: 100%;
   height: auto;
 }
-/* line 692, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 695, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox {
   display: block;
   width: 55vw;
   height: auto;
 }
-/* line 696, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 699, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox .imgWithIntro {
   margin-top: 10px;
   width: 130px;
@@ -795,7 +2600,7 @@ hr.lightcolor {
   border: 0px solid #f0f0f0;
   border-radius: 8px;
 }
-/* line 703, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 706, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox .imgWithIntro img {
   display: block;
   margin: auto;
@@ -806,7 +2611,7 @@ hr.lightcolor {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 714, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 717, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox .imgWithIntro h5 {
   padding: 3px;
   text-align: center;
@@ -817,7 +2622,7 @@ hr.lightcolor {
   border: 0px solid #f0f0f0;
   border-radius: 3px;
 }
-/* line 726, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 729, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox ul {
   padding-left: 0px;
   list-style-type: none;
@@ -825,40 +2630,40 @@ hr.lightcolor {
   font-size: 12px;
   font-weight: 300;
 }
-/* line 732, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 735, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox ul li {
   display: inline;
   padding: 8px;
 }
-/* line 735, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 738, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox ul li a {
   color: black;
 }
-/* line 738, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 741, /Users/EggDouglas/workshop/workshop/css/app */
 .showbox ul li span {
   padding-right: 5px;
 }
-/* line 746, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 749, /Users/EggDouglas/workshop/workshop/css/app */
 .btn-primary {
   background-color: #00a3d6;
   transition: background-color 2s, border-color 2s;
 }
-/* line 750, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 753, /Users/EggDouglas/workshop/workshop/css/app */
 .btn-primary.facebook {
   background-color: #3b5998;
   transition: background-color 2s, border-color 2s;
 }
-/* line 754, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 757, /Users/EggDouglas/workshop/workshop/css/app */
 .btn-primary.facebook:hover {
   background-color: #2d343e;
   border-color: #2d343e;
 }
-/* line 759, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 762, /Users/EggDouglas/workshop/workshop/css/app */
 .btn-primary:hover {
   background-color: #2d343e;
   border-color: #2d343e;
 }
-/* line 768, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 771, /Users/EggDouglas/workshop/workshop/css/app */
 #footer {
   text-align: center;
   margin-top: 80px;
@@ -868,55 +2673,166 @@ hr.lightcolor {
   height: auto;
   width: auto;
 }
-/* line 776, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 779, /Users/EggDouglas/workshop/workshop/css/app */
 #footer ul {
   font-weight: 400;
   font-size: 13px;
 }
-/* line 779, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 782, /Users/EggDouglas/workshop/workshop/css/app */
 #footer ul li {
   margin: 3px;
 }
-/* line 783, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 786, /Users/EggDouglas/workshop/workshop/css/app */
 #footer .footerContainer {
   padding: 20px;
 }
-/* line 786, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 789, /Users/EggDouglas/workshop/workshop/css/app */
 #footer #quick-links {
   text-align: left;
 }
-/* line 789, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 792, /Users/EggDouglas/workshop/workshop/css/app */
 #footer #contacts-footer {
   text-align: left;
 }
-/* line 791, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 794, /Users/EggDouglas/workshop/workshop/css/app */
 #footer #contacts-footer span {
   padding: 3px;
 }
-/* line 794, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 797, /Users/EggDouglas/workshop/workshop/css/app */
 #footer #contacts-footer li {
   padding-bottom: 2px;
 }
-/* line 800, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 803, /Users/EggDouglas/workshop/workshop/css/app */
 #footer #logo a {
   margin: 10px;
   width: 140px;
 }
-/* line 808, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 811, /Users/EggDouglas/workshop/workshop/css/app */
 .pagename {
   margin: 4vw 0 0px 20px;
 }
-/* line 811, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 814, /Users/EggDouglas/workshop/workshop/css/app */
 .pagename h1 {
   margin-left: 15px;
   margin-bottom: 0px;
   color: #525252;
 }
-/* line 816, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 819, /Users/EggDouglas/workshop/workshop/css/app */
 .pagename .breadcrumb {
   background-color: transparent;
 }
-/* line 822, /Users/EggDouglas/workshop/workshop/css/app */
+/* line 825, /Users/EggDouglas/workshop/workshop/css/app */
 .required {
   color: red;
+}
+/* line 830, /Users/EggDouglas/workshop/workshop/css/app */
+.linkbox h5 {
+  color: #999999;
+}
+/* line 833, /Users/EggDouglas/workshop/workshop/css/app */
+.linkbox ul.submenu-col {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 839, /Users/EggDouglas/workshop/workshop/css/app */
+.linkbox ul.submenu-col li a {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 4px 10px;
+  display: block;
+  margin-bottom: 3px;
+}
+/* line 846, /Users/EggDouglas/workshop/workshop/css/app */
+.linkbox ul.submenu-col li a:hover {
+  background: #efefef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #326e99;
+}
+/* line 854, /Users/EggDouglas/workshop/workshop/css/app */
+.linkbox ul.submenu-col li #active {
+  background: #099ad1 url(http://www.ansonika.com/edu/img/arrow.png) no-repeat 96% center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+}
+/* line 868, /Users/EggDouglas/workshop/workshop/css/app */
+.panel .panel-heading {
+  color: white;
+  background-color: #2d343e;
+}
+/* line 873, /Users/EggDouglas/workshop/workshop/css/app */
+.panel .panel-body {
+  background-color: #eaf9ff;
+}
+/* line 876, /Users/EggDouglas/workshop/workshop/css/app */
+.panel .panel-body.gray {
+  background-color: #f2f2f2;
+}
+/* line 881, /Users/EggDouglas/workshop/workshop/css/app */
+#calendar {
+  max-width: 900px;
+  margin: 0 auto;
+}
+/* line 886, /Users/EggDouglas/workshop/workshop/css/app */
+#myModal {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  z-index: 999998;
+}
+/* line 896, /Users/EggDouglas/workshop/workshop/css/app */
+.modal-content a {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  z-index: 999999;
+  right: -22px;
+  top: -22px;
+}
+/* line 904, /Users/EggDouglas/workshop/workshop/css/app */
+.roundPin {
+  float: left;
+  background: #f8f8f8;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  color: #999;
+  font-size: 12px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 4px rgba(200, 200, 200, 0.1), 0 0 3px 0 rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: inset 0 0 0 4px rgba(200, 200, 200, 0.1), 0 0 3px 0 rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0 0 0 4px rgba(200, 200, 200, 0.1), 0 0 3px 0 rgba(0, 0, 0, 0.35);
+  text-shadow: -1px -1px 0px #ffffff;
+  margin: 0 15px 10px 10px;
+  transition: border-radius 3s;
+}
+/* line 922, /Users/EggDouglas/workshop/workshop/css/app */
+.roundPin h2 {
+  color: black;
+}
+/* line 926, /Users/EggDouglas/workshop/workshop/css/app */
+.roundPin:hover {
+  border-radius: 15px;
+}
+/* line 931, /Users/EggDouglas/workshop/workshop/css/app */
+.showblock {
+  padding-top: 25px;
+  height: 150px;
+  width: auto;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+/* line 937, /Users/EggDouglas/workshop/workshop/css/app */
+.showblock:hover {
+  background-color: #eaf9ff;
 }

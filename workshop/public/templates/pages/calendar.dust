@@ -2,139 +2,24 @@
  <!--main body start-->
   <div id="main" class="row">
   	<div class="col-lg-3 col-md-3 col-sm-3">
-  		<div id="up" class="row">
-  			<div class="upbox">
-              <span class="glyphicon glyphicon-th"></span>
-       		  <h3>Expert teachers</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
-            </div>
-            <hr class="lightcolor">
-            <div class="upbox">
-              <span class="glyphicon glyphicon-search"></span>
-       		  <h3>Video Courses</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
-            </div>
-            <hr class="lightcolor">
-            <div class="upbox">
-              <span class="glyphicon glyphicon-film"></span>
-       		  <h3>Library</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
-            </div>
-            <hr class="lightcolor">
-            <div class="upbox">
-              <span class="glyphicon glyphicon-music"></span>
-       		  <h3>Online courses</h3>
-              <p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. </p>
-            </div>
-  		</div>
-  		<div id="down" class="row">
-          <img src="http://www.ansonika.com/edu/img/banner.jpg">
-  		</div>
+  		
+  			<div id="up-pages" class="row">
+	  			<div>
+					<h4>Lorem ipsum</h4>
+					<p>Suspendisse quis risus turpis, ut pharetra arcu. Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam, at faucibus mi ante vel augue.</p>
+					<h6>We are looking for</h6>
+					<ul>
+						<li>Vivamus sagittis lacus vel augue laoreet </li>
+						<li>Nullam quis risus eget urna mollis</li>
+						<li>Nullam id dolor id nibh ultricies</li>
+						<li>Donec id elit non mi porta</li>
+					</ul>
+				</div>       
+  			</div>
   	</div>
 
   	<div class="col-lg-9 col-md-9 col-sm-9">
-  		<h2>Upcoming courses</h2>
-  		<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
-  		<hr class="lightcolor">
-  		<!--start showbox-->
-  		<div class="showbox">
-	        <div class="row">	        	
-	        	<div class="col-md-3">
-	        		<div class="imgWithIntro">
-	        			<img style="padding:15px" src="http://www.ansonika.com/edu/img/lessons.png" alt="">
-	        			<h5>INTRO</h5>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-9">
-	        		<div class="textWithLink">
-	        			<h4>Autem possim his</h4>
-	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
-	        			<ul>
-	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
-	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
-	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
-	        			</ul>
-	        		</div>
-	        	</div>	            
-	        </div>
-        </div>
-        <!--end showbox-->
-        <hr class="lightcolor">
-        <!--start showbox-->
-        <div class="showbox">
-	        <div class="row">	        	
-	        	<div class="col-md-3">
-	        		<div class="imgWithIntro">
-	        			<img src="http://www.ansonika.com/edu/img/teacher.jpg" alt="">
-	        			<h5>HTML5</h5>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-9">
-	        		<div class="textWithLink">
-	        			<h4>Autem possim his</h4>
-	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
-	        			<ul>
-	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
-	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
-	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
-	        			</ul>
-	        		</div>
-	        	</div>	            
-	        </div>
-        </div>
-        <!--end showbox-->
-         <hr class="lightcolor">
-        <!--start showbox-->
-        <div class="showbox">
-	        <div class="row">	        	
-	        	<div class="col-md-3">
-	        		<div class="imgWithIntro">
-	        			<img src="http://www.ansonika.com/edu/img/teacher-2.jpg" alt="">
-	        			<h5>CSS3</h5>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-9">
-	        		<div class="textWithLink">
-	        			<h4>Autem possim his</h4>
-	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
-	        			<ul>
-	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
-	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
-	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
-	        			</ul>
-	        		</div>
-	        	</div>	            
-	        </div>
-        </div>
-        <!--end showbox-->
-        <hr class="lightcolor">
-        <!--start showbox-->
-        <div class="showbox">
-	        <div class="row">	        	
-	        	<div class="col-md-3">
-	        		<div class="imgWithIntro">
-	        			<img src="http://www.ansonika.com/edu/img/teacher-3.jpg" alt="">
-	        			<h5>BOOTSTRAP</h5>
-	        		</div>
-	        	</div>
-	        	<div class="col-md-9">
-	        		<div class="textWithLink">
-	        			<h4>Autem possim his</h4>
-	        			<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, <strong>mea ea ullum epicurei</strong>. Saepe tantas ocurreret duo ea, has facilisi vulputate an. Pri aeque iuvaret nominati et, ad mea clita numquam. </p>
-	        			<ul>
-	        				<li><span class="glyphicon glyphicon-time"></span>Duration: 3 hours</li> |
-	        				<li><span class="glyphicon glyphicon-film"></span><a class="fancybox-media" href="http://www.youtube.com/watch?v=pgk-719mTxM" rel="media-gallery">Play video</a></li> |
-	        				<li><span class="glyphicon glyphicon-cloud"></span><a href="#">Donwload prospect</a></li>
-	        			</ul>
-	        		</div>
-	        	</div>	            
-	        </div>
-        </div>
-        <!--end showbox-->
-        <hr class="lightcolor">
-        <div style="text-align:center">
-        	<a href="all-courses.html" title="Courses" class="btn btn-primary btn-lg">view all courses</a>
-        </div>
-  	</div>
+  		<div id='calendar'></div>
+  	</div>	
   </div>
  <!--main body end-->

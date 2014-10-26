@@ -119,30 +119,24 @@
 		  </div>
 		</div>
 		<div class="row">  		  
-				<div class="container">
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
-    </div>
-</div>
-
-			<div class="col-md-6">
-				<label><span class="required">*</span> Are you human? 3 + 1 =</label>
-				<input type="text" id="verify_contact" class="form-control">
+				
+    
+	        <div class='col-md-6'>
+	        	<label>Select a date <span class="required">* </span></label>
+	            <fieldset disabled>
+	                <div class='input-group date' id='datetimepicker1'>
+	                    <input type='text' class="form-control" />
+	                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+	                    </span>
+	                </div>
+	            </fieldset>
+	        </div>
+	    
+				<div class="col-md-6">
+					<label><span class="required">*</span> Are you human? 3 + 1 =</label>
+					<input type="text" id="verify_contact" class="form-control">
+				</div>
 			</div>
-		</div>
 		<br>
 		<input style="margin-left:15px;margin-bottom:15px" type="submit" value="Submit" class="btn btn-primary">  		  		
   </div>

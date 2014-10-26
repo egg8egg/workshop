@@ -3,7 +3,7 @@
 	<a href="/about">
 		<div class="col-lg-3 col-md-4 col-sm-4">			
 			<button type="button" class="btn btn-default btn-lg">
-			<span class="glyphicon glyphicon-star"></span> About
+			<span class="glyphicon glyphicon-user"></span> About
 			</button>		
 		</div>
 	</a>
@@ -19,7 +19,7 @@
 	<a href="/calendar">		
 		<div class="col-lg-3 col-md-4 col-sm-4">		
 			<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-glass"></span> Calendar
+		  	<span class="glyphicon glyphicon-calendar"></span> Calendar
 			</button>		
 		</div>
 	</a>
@@ -35,30 +35,30 @@
 	<a href="/course_detail">
 		<div class="col-lg-3 col-md-4 col-sm-4">
 			<button type="button" class="btn btn-default btn-lg">
-			  	<span class="glyphicon glyphicon-th"></span> Course Detail
+			  	<span class="glyphicon glyphicon-th-list"></span> Course Detail
 			</button>
 		</div>
 	</a>
 
 	<a href="/courses">
-		<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
-			<button type="button" class="btn btn-default btn-lg">
-			  	<span class="glyphicon glyphicon-home"></span> Courses
-			</button>
-		</div>
-	</a>
-
-	<a href="/gallenry">
 		<div class="col-lg-3 col-md-4 col-sm-4">
 			<button type="button" class="btn btn-default btn-lg">
-			  	<span class="glyphicon glyphicon-search"></span> Gallenry
+			  	<span class="glyphicon glyphicon-book"></span> Courses
 			</button>
 		</div>
 	</a>
 
-	<div class="col-lg-3 col-md-4 col-sm-4">
+	<a href="/gallery">
+		<div class="col-lg-3 col-md-4 col-sm-4">
+			<button type="button" class="btn btn-default btn-lg">
+			  	<span class="glyphicon glyphicon-picture"></span> Gallery
+			</button>
+		</div>
+	</a>
+
+	<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-film"></span> components
+		  	<span class="glyphicon glyphicon-home"></span> components
 		</button>
 	</div>
 </div>
@@ -66,19 +66,19 @@
 	<a href="/contacts">
 		<div class="col-lg-3 col-md-4 col-sm-4">
 			<button type="button" class="btn btn-default btn-lg">
-			  	<span class="glyphicon glyphicon-camera"></span> Contacts
+			  	<span class="glyphicon glyphicon-phone-alt"></span> Contacts
 			</button>
 		</div>
 	</a>
 	
 	<a href="/news">
-		<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
+		<div class="col-lg-3 col-md-4 col-sm-4">
 			<button type="button" class="btn btn-default btn-lg">
-			  	<span class="glyphicon glyphicon-cloud"></span> News
+			  	<span class="glyphicon glyphicon-flag"></span> News
 			</button>
 		</div>
 	</a>
-	<div class="col-lg-3 col-md-4 col-sm-4">
+	<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
 		<button type="button" class="btn btn-default btn-lg">
 		  	<span class="glyphicon glyphicon-print"></span> ha la
 		</button>
