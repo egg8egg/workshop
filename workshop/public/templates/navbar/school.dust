@@ -1,7 +1,7 @@
 <html>
 <div class="row">
 	<div class="col-md-7">
-		<iframe height="300" src="http://www.youtube.com/embed/pgk-719mTxM?wmode=transparent"></iframe>
+		<iframe height="300" width="95%" src="http://www.youtube.com/embed/pgk-719mTxM?wmode=transparent"></iframe>
 	</div>
 	<div class="col-md-5">
 		<h4>Youtube video</h4>
@@ -19,33 +19,33 @@
 	<div class="col-md-3">
 		<h5>Degrees</h5>
 		<ul class="list-menu">
-			<li><a href="all-courses.html" title="All courses">Prospect</a></li>
-			<li><a href="all-courses.html" title="All courses">Mission</a></li>
-			<li><a href="all-courses.html" title="All courses">President of the College</a></li>
+			<li><a href="/courses" title="All courses">Prospect</a></li>
+			<li><a href="/courses" title="All courses">Mission</a></li>
+			<li><a href="/courses" title="All courses">President of the College</a></li>
 		</ul>
 	</div>
 	<div class="col-md-3">
 		<h5>Bacherlors</h5>
 		<ul class="list-menu">
-			<li><a href="all-courses.html" title="All courses">Quick Facts</a></li>
-			<li><a href="all-courses.html" title="All courses">Mission</a></li>
-			<li><a href="all-courses.html" title="All courses">President of the College</a></li>
+			<li><a href="/courses" title="All courses">Quick Facts</a></li>
+			<li><a href="/courses" title="All courses">Mission</a></li>
+			<li><a href="/courses" title="All courses">President of the College</a></li>
 		</ul>
 	</div>
 	<div class="col-md-3">
 		<h5>Masters</h5>
 		<ul class="list-menu">
-			<li><a href="all-courses.html" title="All courses">Quick Facts</a></li>
-			<li><a href="all-courses.html" title="All courses">Mission</a></li>
-			<li><a href="all-courses.html" title="All courses">President of the College</a></li>
+			<li><a href="/courses" title="All courses">Quick Facts</a></li>
+			<li><a href="/courses" title="All courses">Mission</a></li>
+			<li><a href="/courses" title="All courses">President of the College</a></li>
 		</ul>
 	</div>
 	<div class="col-md-3">
 		<h5>Courses</h5>
 		<ul class="list-menu">
-			<li><a href="all-courses.html" title="All courses">Quick Facts</a></li>
-			<li><a href="all-courses.html" title="All courses">Mission</a></li>
-			<li><a href="all-courses.html" title="All courses">President of the College</a></li>
+			<li><a href="/courses" title="All courses">Quick Facts</a></li>
+			<li><a href="/courses" title="All courses">Mission</a></li>
+			<li><a href="/courses" title="All courses">President of the College</a></li>
 		</ul>
 	</div>
 </div>

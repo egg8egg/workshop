@@ -1,9 +1,9 @@
 <div class="droppad">
-	<h5>About<h5>
+	<a href="/about"><h5>About<h5></a>
 </div>
 <div class="droppad">
-	<h5>All courses<h5>
+	<a href="/courses"><h5>All courses<h5></a>
 </div>
 <div class="droppad">
-	<h5>Course detail<h5>
+	<a href="/course_detail"><h5>Course detail<h5></a>
 </div>

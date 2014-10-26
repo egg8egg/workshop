@@ -4,25 +4,26 @@
 		<div class="col-md-3">
 			<h4>Quick links</h4>
 			<ul class="courses">
-				<li><a href="all-courses.html" title="All courses">All courses</a></li>
-				<li><a href="course-detail.html" title="Course detail">Course detail</a></li>
-				<li><a href="staff.html" title="Meet the team">Meet the team</a></li>
-				<li><a href="contact.html" title="Apply for a course">Apply for a course</a></li>
-				<li><a href="about-us.html" title="About">About </a></li>
-				<li><a href="news-events.html" title="News">News</a></li>
-				<li><a href="contact.html" title="Contact">Ask for more information</a></li>
+				<li><a href="/courses" title="All courses">All courses</a></li>
+				<li><a href="/course_detail" title="Course detail">Course detail</a></li>
+				<li><a href="/blog" title="Meet the team">Meet the team</a></li>
+				<li><a href="/calendar" title="Apply for a course">Apply for a course</a></li>
+				<li><a href="/about" title="About">About </a></li>
+				<li><a href="/news" title="News">News</a></li>
+				<li><a href="/contacts" title="Contact">Ask for more information</a></li>
 			</ul>
-			<p><a href="all-courses.html" title="Courses" class="btn btn-primary">View all courses</a></p>
+			<br>
+			<p><a href="/courses" title="Courses" class="btn btn-primary">View all courses</a></p>
 		</div>
 
 		<div class="col-md-3">
 			<div class="row">
-				<h5><a href="#"> Administration </a> (10)</h5>
+				<h5><a href="/courses"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 				<button type="button" class="btn btn-danger btn-xs">Read more</button>
 			</div>
 			<div class="row">
-				<h5><a href="#"> Administration </a> (10)</h5>
+				<h5><a href="/courses"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 				<button type="button" class="btn btn-danger btn-xs">Read more</button>
 			</div>	
@@ -30,12 +31,12 @@
 		
 		<div class="col-md-3">
 			<div class="row">
-				<h5><a href="#"> Administration </a> (10)</h5>
+				<h5><a href="/courses"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 				<button type="button" class="btn btn-danger btn-xs">Read more</button>
 			</div>
 			<div class="row">
-				<h5><a href="#"> Administration </a> (10)</h5>
+				<h5><a href="/courses"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 				<button type="button" class="btn btn-danger btn-xs">Read more</button>
 			</div>	
@@ -43,12 +44,12 @@
 
 		<div class="col-md-3">
 			<div class="row">
-				<h5><a href="#"> Administration </a> (10)</h5>
+				<h5><a href="/courses"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 				<button type="button" class="btn btn-danger btn-xs">Read more</button>
 			</div>
 			<div class="row">
-				<h5><a href="#"> Administration </a> (10)</h5>
+				<h5><a href="/courses"> Administration </a> (10)</h5>
 				<p>An utinam reprimique duo, putant mandamus cu qui. Autem possim his cu, quodsi nominavi fabellas ut sit, mea ea ullum epicurei.</p>
 				<button type="button" class="btn btn-danger btn-xs">Read more</button>
 			</div>	

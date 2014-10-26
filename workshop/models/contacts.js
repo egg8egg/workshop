@@ -2,6 +2,7 @@
 
 module.exports = function ContactsModel(){
 	return {
-		viewName:"school"
+		"viewPath":"pages/contacts",
+		"title":"Contacts"
 	};
 } ;

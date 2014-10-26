@@ -1,0 +1,151 @@
+ <!--main body start-->
+  <div id="main" class="row">
+  	<div class="col-lg-3 col-md-3 col-sm-3">
+  		<div id="up-pages" class="row">
+  			<h4>Address</h4>
+			<ul class="address">
+				<li><span class="glyphicon glyphicon-home"></span></i> 11 Fifth Ave, Loftus - NEW JERSEY, US</li>
+				<li><span class="glyphicon glyphicon-phone"></span></i> Telephone: + 61 (2) 8093 3400</li>
+			    <li><span class="glyphicon glyphicon-print"></span></i> Fax: +61 (2) 9542 3599</li>
+			    <li><span class="glyphicon glyphicon-envelope"></span></i> Email: <a href="#">submissions@domain.com</a></li>
+			</ul>
+            <hr class="lightcolor">
+            <iframe height="250" width="100%" src="https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=new+york&amp;sll=40.714353,-74.005973&amp;sspn=0.868126,2.422485&amp;ie=UTF8&amp;hq=&amp;hnear=New+York,+Stati+Uniti&amp;t=m&amp;z=10&amp;iwloc=A&amp;ll=40.714353,-74.005973&amp;output=embed" style="border:0;">
+			</iframe>
+			<br>
+			<small><a href="https://maps.google.it/maps?f=q&amp;source=embed&amp;hl=it&amp;geocode=&amp;q=new+york&amp;sll=40.714353,-74.005973&amp;sspn=0.868126,2.422485&amp;ie=UTF8&amp;hq=&amp;hnear=New+York,+Stati+Uniti&amp;t=m&amp;z=10&amp;iwloc=A&amp;ll=40.714353,-74.005973" style="text-align:left">View bigger</a></small>
+            <hr class="lightcolor">
+            <p>Get directions writing your start point.</p>
+            <form action="http://maps.google.com/maps" method="get" target="_blank">
+                <input type="text" name="saddr" placeholder="Enter your location" class="form-control">
+                <br>
+                <input type="hidden" name="daddr" value="New York, NY 11430"> <!-- Write here your end point -->
+                <input type="submit" value="Get directions" class="btn btn-primary">
+            </form>
+        
+           
+  		</div>
+  		<div id="down" class="row">
+          <img src="http://www.ansonika.com/edu/img/banner.jpg">
+  		</div>
+  	</div>
+
+  	<div class="col-lg-9 col-md-9 col-sm-9">
+  		<br>
+  		
+  		<p class="lead">
+			An utinam reprimique duo, <strong>putant mandamus cu qui</strong>. Priaeque iuvaret nominati et, ad mea clita numquam. Maluisset dissentiunt et per, dico liber erroribus vis te. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.
+		</p>
+  		<hr class="lightcolor">
+  		<h4>General Enquire or Apply</h4>
+  		<br>
+  		<div class="row">  		  
+		  <div style="margin-bottom:10px;" class="col-md-6">
+		  	<label>First Name <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="First Name">
+		  </div>
+		  
+		  <div class="col-md-6">
+		  	<label>Last Name <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="Last Name">
+		  </div>
+		</div>
+		<div class="row">  		  
+		  <div style="margin-bottom:10px;" class="col-md-6">
+		  	<label>Email <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="Email">
+		  </div>
+		  
+		  <div class="col-md-6">
+		  	<label>Phone <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="Phone">
+		  </div>
+		</div>
+  		<br>
+  		<div class="row">
+  			<div class="col-md-6">
+	  			<label>Select a department</label><br>
+		  		<select class="form-control">
+				  <option>One Piece</option>
+				  <option>Naruto</option>
+				  <option>Hunter x Hunter</option>
+				</select>
+  			</div>
+  		</div>
+  		<br>
+  		<div class="row">
+  			<div class="col-md-12">
+	  			<label>Message <span class="required">*</span></label>
+		  		<textarea rows="5" id="message_contact" class="form-control"></textarea>
+  			</div>
+  		
+  		</div>
+  		<br>
+  		<div class="row">
+			<div class="col-md-6">
+				<label><span class="required">*</span> Are you human? 3 + 1 =</label>
+				<input type="text" id="verify_contact" class="form-control">
+			</div>
+			
+
+			<div class="col-md-6">
+				<input style="margin-top:24px" type="submit" value="Submit" class="btn btn-primary">
+			</div>
+
+		</div>
+  		<hr class="lightcolor">
+  		<h4>Plan a visit</h4>
+  		<br>
+  		<div class="row">  		  
+		  <div style="margin-bottom:10px;" class="col-md-6">
+		  	<label>First Name <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="First Name">
+		  </div>
+		  
+		  <div class="col-md-6">
+		  	<label>Last Name <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="Last Name">
+		  </div>
+		</div>
+		<div class="row">  		  
+		  <div style="margin-bottom:10px;" class="col-md-6">
+		  	<label>Email <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="Email">
+		  </div>
+		  
+		  <div class="col-md-6">
+		  	<label>Phone <span class="required">* </span></label>
+		    <input type="text" class="form-control" placeholder="Phone">
+		  </div>
+		</div>
+		<div class="row">  		  
+				<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+
+			<div class="col-md-6">
+				<label><span class="required">*</span> Are you human? 3 + 1 =</label>
+				<input type="text" id="verify_contact" class="form-control">
+			</div>
+		</div>
+		<br>
+		<input style="margin-left:15px;margin-bottom:15px" type="submit" value="Submit" class="btn btn-primary">  		  		
+  </div>
+
+</div>
+ <!--main body end-->

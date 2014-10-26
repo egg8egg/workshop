@@ -70,7 +70,7 @@
     <div id="card" class="row">
 			<div class="col-md-4 ">
 				<div id="green" class="box">
-					<a href="all-courses.html" title="All Courses">	                		           
+					<a href="/courses" title="All Courses">	                		           
             <img src="http://www.ansonika.com/edu/img/icon-home-course.png" alt="">
             <h3>Courses</h3>
             <p>Lorem ipsum dolor sit amet, dicta aliquip ad vix, ne sit everti corpora. Qui cu eros feugiat, elitr iudico ad pri.</p>
@@ -80,7 +80,7 @@
 			</div>
 			<div class="col-md-4 ">
 				<div id="orange"  class="box">
-					<a href="all-courses.html" title="All Courses">	                		           
+					<a href="/course_detail" title="All Courses">	                		           
            <img src="http://www.ansonika.com/edu/img/icon-home-apply.png" alt="">
            <h3>Apply now</h3>
            <p>Lorem ipsum dolor sit amet, dicta aliquip ad vix, ne sit everti corpora. Qui cu eros feugiat, elitr iudico ad pri.</p>       
@@ -89,7 +89,7 @@
 			</div>
 			<div class="col-md-4 ">
 				<div id="pink" class="box">
-					<a href="all-courses.html" title="All Courses">	                		           
+					<a href="/contacts" title="All Courses">	                		           
             <img src="http://www.ansonika.com/edu/img/icon-home-visit.png" alt="">
             <h3>Plan a visit</h3>
             <p>Lorem ipsum dolor sit amet, dicta aliquip ad vix, ne sit everti corpora. Qui cu eros feugiat, elitr.</p>            

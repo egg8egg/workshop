@@ -2,16 +2,16 @@
 	<div class="row">
 		<div class = "top-head-container">		
 		    <div class="col-md-5 col-sm-6">
-			    <img id="big" class="hidden-xs" src="http://www.ansonika.com/edu/img/logo.png">
-			    </img>
+			    <a href="/"><img id="big" class="hidden-xs" src="http://www.ansonika.com/edu/img/logo.png">
+			    </img></a>
 			    <img id="small" class="visible-xs" src="http://www.ansonika.com/edu/img/logo-mobile.png">
 			    </img>			    
 		    </div>
 		    <div class="col-md-4 col-sm-3">		    	
 		    	<ul>
-	                <li><a href="index.html" title="Home">Home</a> | </li>
-	                <li><a href="news-events.html" title="News and Events">News &amp; Events</a> | </li>
-	                <li><a id="myAjax" href="" title="Contact">Contact</a></li>
+	                <li><a href="/" title="Home">Home</a> | </li>
+	                <li><a href="/news" title="News and Events">News &amp; Events</a> | </li>
+	                <li><a href="/contacts" title="Contact">Contact</a></li>
 	            </ul>				
 		    </div>
 
@@ -71,7 +71,7 @@
 			  </li>
 			 
 			  <li>
-			  	<a href="#">BLOG</a>
+			  	<a href="/blog">BLOG</a>
 			  </li>
 			  <li>
 			  	<a class="slidedown" href="#">SIMPLE DROP</a>
@@ -92,4 +92,4 @@
     </div> 
     
 
- <!--header end
+ <!--header end-->

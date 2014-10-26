@@ -1,42 +1,61 @@
 <html>
 <div class="row marginDiv">
-	<div class="col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-star"></span> I like
-		</button>
-	</div>
-	<div class="col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-music"></span> play with
-		</button>
-	</div>
-	<div class="col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-glass"></span> bootstrap
-		</button>
-	</div>
+	<a href="/about">
+		<div class="col-lg-3 col-md-4 col-sm-4">			
+			<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-star"></span> About
+			</button>		
+		</div>
+	</a>
+
+	<a href="/blog">
+		<div class="col-lg-3 col-md-4 col-sm-4">		
+			<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-music"></span> Blog
+			</button>		
+		</div>
+	</a>
+
+	<a href="/calendar">		
+		<div class="col-lg-3 col-md-4 col-sm-4">		
+			<button type="button" class="btn btn-default btn-lg">
+		  	<span class="glyphicon glyphicon-glass"></span> Calendar
+			</button>		
+		</div>
+	</a>
+
 	<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
 		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-glass"></span> bootstrap
+		  	<span class="glyphicon glyphicon-phone"></span> Bootstrap
 		</button>
 	</div>
 </div>
 <div class="row marginDiv">
-	<div class="col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-th"></span> glyphicon 
-		</button>
-	</div>
-	<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-glass"></span> bootstrap
-		</button>
-	</div>
-	<div class="col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-search"></span> and other
-		</button>
-	</div>
+
+	<a href="/course_detail">
+		<div class="col-lg-3 col-md-4 col-sm-4">
+			<button type="button" class="btn btn-default btn-lg">
+			  	<span class="glyphicon glyphicon-th"></span> Course Detail
+			</button>
+		</div>
+	</a>
+
+	<a href="/courses">
+		<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
+			<button type="button" class="btn btn-default btn-lg">
+			  	<span class="glyphicon glyphicon-home"></span> Courses
+			</button>
+		</div>
+	</a>
+
+	<a href="/gallenry">
+		<div class="col-lg-3 col-md-4 col-sm-4">
+			<button type="button" class="btn btn-default btn-lg">
+			  	<span class="glyphicon glyphicon-search"></span> Gallenry
+			</button>
+		</div>
+	</a>
+
 	<div class="col-lg-3 col-md-4 col-sm-4">
 		<button type="button" class="btn btn-default btn-lg">
 		  	<span class="glyphicon glyphicon-film"></span> components
@@ -44,16 +63,21 @@
 	</div>
 </div>
 <div class="row marginDiv">
-	<div class="col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-camera"></span> le so 
-		</button>
-	</div>
-	<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
-		<button type="button" class="btn btn-default btn-lg">
-		  	<span class="glyphicon glyphicon-glass"></span> bootstrap
-		</button>
-	</div>
+	<a href="/contacts">
+		<div class="col-lg-3 col-md-4 col-sm-4">
+			<button type="button" class="btn btn-default btn-lg">
+			  	<span class="glyphicon glyphicon-camera"></span> Contacts
+			</button>
+		</div>
+	</a>
+	
+	<a href="/news">
+		<div class="visible-lg col-lg-3 col-md-4 col-sm-4">
+			<button type="button" class="btn btn-default btn-lg">
+			  	<span class="glyphicon glyphicon-cloud"></span> News
+			</button>
+		</div>
+	</a>
 	<div class="col-lg-3 col-md-4 col-sm-4">
 		<button type="button" class="btn btn-default btn-lg">
 		  	<span class="glyphicon glyphicon-print"></span> ha la

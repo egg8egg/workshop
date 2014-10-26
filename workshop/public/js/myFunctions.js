@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
     $(".slidedown").click(function() {
     	if($(this).next("div").is(":visible")){
     		$(this).next("div").slideToggle("slow");

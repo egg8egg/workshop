@@ -1,0 +1,101 @@
+
+ <!--main body start-->
+  <div id="main" class="row">
+  	<div class="col-lg-3 col-md-3 col-sm-3">
+  		<div id="up-pages" class="row">
+  			
+              <form role="form">
+	           		<div style="margin:0px -12px 10px 0" class="col-md-9">
+	           			<input class="form-control" id="search" placeholder="Search">
+
+	           		</div>
+
+	           		<div class="col-md-3">
+	           			<button type="submit" class="btn btn-primary">search</button>
+	           		</div>
+	           		
+	          </form> 
+            <br>
+        	<br>  
+        	<br>
+        	<br>  
+            <div class="upbox">
+            	
+       		  	<h5>Text widget</h5>
+                <p>
+				Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				</p>
+            </div>
+            <hr class="lightcolor">
+            <div class="upbox">
+             
+				<h4>Recent post</h4>
+				<ul>
+					<li>
+                    	<i class="icon-calendar-empty"></i> 16th July, 2020 <div><a href="#">It is a long established fact that a reader will be distracted </a></div>
+                    </li>
+                    <hr class="lightcolor">
+					<li>
+                    	<i class="icon-calendar-empty"></i> 16th July, 2020 <div><a href="#">It is a long established fact that a reader will be distracted </a></div>
+                    </li>
+                    <hr class="lightcolor">
+					<li>
+                    	<i class="icon-calendar-empty"></i> 16th July, 2020 <div><a href="#">It is a long established fact that a reader will be distracted </a></div>
+                    </li>
+				</ul>
+            </div>
+           
+  		</div>
+  		<div id="down" class="row">
+          <img src="http://www.ansonika.com/edu/img/banner.jpg">
+  		</div>
+  	</div>
+
+  	<div class="col-lg-9 col-md-9 col-sm-9">
+  		<h2><a href="/about">Duis aute irure dolor in reprehenderit</a></h2>
+  		<div class="bigPiture">
+  			<img src="http://www.ansonika.com/edu/img/blog-1.jpg" alt="">
+  		</div>
+  		<hr class="lightcolor">
+  		<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus...</p>
+  		<br>
+  		<p><a href="/about" class="btn btn-primary">Read more</a></p>
+  		<br>
+  		<br>
+  		<br>
+  		<h2><a href="/about">Duis aute irure dolor in reprehenderit</a></h2>
+  		<div class="bigPiture">
+  			<img src="http://www.ansonika.com/edu/img/blog-2.jpg" alt="">
+  		</div>
+  		<hr class="lightcolor">
+  		<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus...</p>
+  		<br>
+  		<p><a href="/about" class="btn btn-primary">Read more</a></p>
+  		<br>
+  		<br>
+  		<br>
+  		<h2><a href="/about">Duis aute irure dolor in reprehenderit</a></h2>
+  		<div class="bigPiture">
+  			<img src="http://www.ansonika.com/edu/img/blog-3.jpg" alt="">
+  		</div>
+  		<hr class="lightcolor">
+  		<p>Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus...</p>
+  		<br>
+  		<p><a href="/about" class="btn btn-primary">Read more</a></p>
+  		<br>
+  		<hr class="lightcolor">
+  		
+  		<div style="text-align:center;width:interit" >
+	  		<ul class="pagination pagination-lg">
+			  <li><a href="#">&laquo;</a></li>
+			  <li  class="active"><a href="#">1</a></li> 
+			  <li><a href="#">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li><a href="#">5</a></li>
+			  <li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+  	</div>
+  </div>
+ <!--main body end-->
