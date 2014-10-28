@@ -21,8 +21,9 @@ module.exports = function (router) {
     var course_detailModel = new Course_detailModel();
     var galleryModel = new GalleryModel();
 
-
     router.get('/', function (req, res) {
+        //res.locals.context = { locality: { language: 'es', country: 'ES' } };
+
         res.render('index', indexModel);
     });
 
@@ -56,6 +57,12 @@ module.exports = function (router) {
 
     router.get('/gallery', function (req, res) {
         res.render('index', galleryModel);
+    });
+
+
+    router.get('/setLocale/:locale', function (req, res) {
+    res.cookie('locale', req.params.locale);
+    res.redirect('/');
     });
 
 };

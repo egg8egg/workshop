@@ -5,7 +5,7 @@
         "view engine": "js",
         "views": "path:./.build/templates"
     },
-
+    
     "view engines": {
         "js": {
             "module": "engine-munger",
@@ -24,6 +24,7 @@
         }
     },
     
+
 
     "i18n": {
         "contentPath": "path:./locales",
@@ -71,6 +72,14 @@
             "module": {
                 "name": "kraken-js/middleware/500",
                 "arguments": [ "errors/500" ]
+            }
+        },
+
+        "locale": {
+            "priority": 95,
+            "enabled": true,
+            "module": {
+                "name": "path:./lib/locale"
             }
         }
 
