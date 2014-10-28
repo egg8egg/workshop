@@ -18,7 +18,8 @@ $(document).ready(function(){
     		else{
     			$(this).next("div").slideToggle("slow");
     		}
-    	}	   	
+    	}
+    		   	
     });
     //navBar slidedown end
 
@@ -107,6 +108,22 @@ $(document).ready(function(){
                 });
            });
 		//gallery lightbox end
+
+		//back to top widget
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() > 300) {
+					$('#totop').fadeIn();	
+				} else {
+					$('#totop').fadeOut();
+				}
+			});
+		 
+			$('#totop').click(function() {
+				$('body,html').animate({scrollTop:0},500);
+			});	
+	
+});
 
   });
 

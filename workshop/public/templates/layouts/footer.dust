@@ -20,7 +20,7 @@
 	            </ul>
 	            <hr class="lightcolor">
 	        	<h4>Newsletter</h4>
-	            <p>Donec adipiscing, quam non faucibus luctus, mi arcu blandit diam. Dolor consul graecis nec ut, scripta eruditi scriptorem et nam.</p>
+	            {@pre type="content" key="test"/}
 	           <form role="form">
 	           		<input type="email" class="form-control" id="email" placeholder="Enter email">
 	           		<br>

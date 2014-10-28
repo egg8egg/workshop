@@ -14,7 +14,7 @@ require(['jquery','bootstrap'], function ($,bootstrap) {
     var app = {
         initialize: function () {
             
-            
+           
         }
     };
 

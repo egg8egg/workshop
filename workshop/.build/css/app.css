@@ -2836,3 +2836,12 @@ hr.lightcolor {
 .showblock:hover {
   background-color: #eaf9ff;
 }
+/* line 942, /Users/EggDouglas/workshop/workshop/css/app */
+#totop {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9997;
+  cursor: pointer;
+  display: none;
+}
